@@ -4,8 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="标签, 计算机科学在读 | 爱生活 | 爱思考">
-    <meta name="description" content="标签 | 沿溪行">
+    <meta name="keywords" content="专题九：粒子群算法, 计算机科学在读 | 爱生活 | 爱思考">
+    <meta name="description" content="专题九：粒子群算法&amp;emsp;&amp;emsp;智能算法有遗传算法、人工神经网络算法、模拟退火算法等  
+一.粒子群算法简介1.特点简单易行、收敛速度快、设置参数少  
+2.基本思想①源于对鸟群捕食行为的研究②模拟鸟群飞行觅食的行为，通过集体协作">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>标签 | 沿溪行</title>
+    <title>专题九：粒子群算法 | 沿溪行</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -303,12 +305,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">tags</h1>
+                    <h1 class="description center-align post-title">专题九：粒子群算法</h1>
                 </div>
             </div>
         </div>
@@ -423,12 +425,37 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">
+                                <span class="chip bg-color">数学建模</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%99%BA%E8%83%BD%E7%AE%97%E6%B3%95/">
+                                <span class="chip bg-color">智能算法</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%AE%97%E6%B3%95/">
+                                <span class="chip bg-color">算法</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%B2%92%E5%AD%90%E7%BE%A4%E7%AE%97%E6%B3%95PSO/">
+                                <span class="chip bg-color">粒子群算法PSO</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/" class="post-category">
+                                数学建模
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -451,14 +478,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    2.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    10 分
                 </div>
                 
 
@@ -474,7 +501,31 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h2 id="专题九：粒子群算法"><a href="#专题九：粒子群算法" class="headerlink" title="专题九：粒子群算法"></a><center>专题九：粒子群算法</center></h2><p>&emsp;&emsp;智能算法有遗传算法、人工神经网络算法、模拟退火算法等  </p>
+<h4 id="一-粒子群算法简介"><a href="#一-粒子群算法简介" class="headerlink" title="一.粒子群算法简介"></a>一.粒子群算法简介</h4><h5 id="1-特点"><a href="#1-特点" class="headerlink" title="1.特点"></a>1.特点</h5><p>简单易行、收敛速度快、设置参数少  </p>
+<h5 id="2-基本思想"><a href="#2-基本思想" class="headerlink" title="2.基本思想"></a>2.基本思想</h5><p>①源于对鸟群捕食行为的研究<br>②模拟鸟群飞行觅食的行为，通过集体协作使群体达到最优目的  </p>
+<h5 id="3-场景"><a href="#3-场景" class="headerlink" title="3.场景"></a>3.场景</h5><p>①已知<br>i.在这块区域只有一块食物<br>ii.所有的鸟都不知道食物在哪里<br>iii.但是它们能够感受到当前的位置离食物有多远<br>那么找到食物的最优策略是什么呢？<br><b>搜寻目前离食物最近的鸟的周围区域，根据自己的飞行经验判断食物所在，PSO受此启发，PSO的基础是信息的社会共享</b><br>②行为研究<br>i.社会行为<br>ii.个体认知</p>
+<h4 id="二-粒子群算法"><a href="#二-粒子群算法" class="headerlink" title="二.粒子群算法"></a>二.粒子群算法</h4><h5 id="1-算法介绍"><a href="#1-算法介绍" class="headerlink" title="1.算法介绍"></a>1.算法介绍</h5><p>①每个寻优的问题都被想象为一只鸟，称为“粒子”。所有粒子都在一个D维空间进行搜索。<br>②所有的粒子都由一个适应度函数（fitness function）确定适应值以判断目前位置的好坏。<br>③每个粒子必须赋予记忆功能，能记住所搜寻到的最佳位置。<br>④每个粒子还有一个速度以决定飞行的距离和方向。这个速度根据它本身的飞行经验以及同伴的飞行经验进行动态调整。  </p>
+<h5 id="2-粒子群优化算法求最优解详细过程"><a href="#2-粒子群优化算法求最优解详细过程" class="headerlink" title="2.粒子群优化算法求最优解详细过程"></a>2.粒子群优化算法求最优解详细过程</h5><p>①基本假设<br>D维空间中，有N个粒子：<br>&emsp;&emsp;粒子i位置：$x_{i}=(x_{i1},x_{i1},…,x_{iD})$,将$x_i$代入适应函数$f(x_i)$求适应值。<br>&emsp;&emsp;粒子i速度：$v_i=(v_{i1},v_{i2},…,v_{iD})$<br>&emsp;&emsp;粒子i个体经历过最好位置：$pbest_i=(p_{i1},p_{i2},…,p_{iD})$<br>&emsp;&emsp;种群所经历过最好位置：$gbest=(g_1,g_2,…,g_D)$<br>通常，在第$d(1\leq d \leq D)$维的位置变化范围限定在$[X_{min,d},X_{max,d}]$内，速度变化范围限定在$[-V_{max,d},V_{max,d}]$内（即在迭代中如果$V_{id},X_{id}$超出了边界值，则该维的速度或位置限制为最大速度或边界位置，过快可能会“嗖”的一下错过最优，过慢会导致迭代次数很大）<br>②迭代过程<br>i.粒子i的第d维速度更新公式<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$V_{id}^{k}=WV_{id}^{k-1}+c_1r_1(pbest_{id}-x_{id}^{k-1})+c_2r_2(gbest_d-x_{id}^{k-1})$<br>ii.粒子i的第d维位置更新公式<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$x_{id}^k=x_{id}^{k-1}+v_{id}^{k-1}$<br>$v_{id}^{k}$：第k次迭代粒子i飞行速度矢量的第d维分量<br>$x_{id}^k$：第k次迭代粒子i位置矢量的第d维分量<br>$c_1,c_2$：加速度常数，调节学习最大步长<br>$r_1,r_2$：两个随机函数，取值范围[0,1],以增加搜索随机性<br>$w$：惯性权重，非负数，调节对解空间的搜索范围<br>iii.粒子速度更新公式包含三个部分<br>$\cdot$粒子先前速度<br>$\cdot$“认知”部分：表示粒子本身的思考，可理解为粒子i当前位置和最优位置之间的距离<br>$\cdot$“社会”部分：表示粒子间的信息共享与合作，可理解为粒子i当前位置与群体最好位置之间的距离<br>&emsp;&emsp;&emsp;&emsp;$v_{id}=w·v_{id}(t)+c_1·rand()·(P_{id}-x_{id}(t))+c_2·rand()·(P_{gd}-x_{id}(t))$<br>&emsp;&emsp;&emsp;&emsp;$x_i(t+1)=x_i(t)+v_i(t)$<br>&emsp;&emsp;&emsp;&emsp;$V_i=(V_{i1},V_{i2},…,V_{iD})$<br>&emsp;&emsp;&emsp;&emsp;$X_{i}=(X_{i1},X_{i1},…,X_{iD})$<br>③算法流程<br>i.initial初始化：初始化粒子群体（群体规模为n），包括随机位置和速度  </p>
+<p>ii.evaluation评价：根据fitness function，评价每个粒子的适应度  </p>
+<p>iii.find the best寻优：对每个粒子，将其当前适应值与其个体历史最佳位置（pbest）对应的适应值比较，如果当前的适应值更高，则将用当前位置更新历史最佳位置pbest  </p>
+<p>iv.find the gbest寻优：对每个粒子，将其当前适应值与其个体历史最佳位置（gbest）对应的适应值比较，如果当前的适应值更高，则将用当前位置更新历史最佳位置gbest  </p>
+<p>v.update the velocity更新：根据公式更新每个粒子的速度与位置  </p>
+<p>vi.如果未能满足结束条件，则返回步骤2，通常算法达到最大迭代次数$G_{max}$或者最佳适应度值小于给定阈值时算法停止  </p>
+<h5 id="3-粒子群算法构成要素"><a href="#3-粒子群算法构成要素" class="headerlink" title="3.粒子群算法构成要素"></a>3.粒子群算法构成要素</h5><p>①群体大小m<br>m是一个整型参数<br>m很小：陷入局部最优的可能性大<br>m很大：PSO优化能力很好，但是效率很低<br>当群体数目增长到一定水平时，再增长将不再有显著作用<br>②权重因子$w$,学习因子$c_1,c_2$<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$V_{id}^{k}=WV_{id}^{k-1}+c_1r_1(pbest_{id}-x_{id}^{k-1})+c_2r_2(gbest_d-x_{id}^{k-1})$<br>&emsp;&emsp;对于权重因子而言，是<b>描述粒子上一代速度对当前代速度的影响，$w$值较大，全局寻优能力强，反之。当问题空间较大时，为了在搜索速度和搜索精度之间达到平衡，通常做法是使算法在前期有较高的全局搜索能力，以得到合适的种子，而在后期有较高的局部搜索能力以提高收敛精度。故$w$不宜为一个固定常数。</b>  </p>
+<p>粒子速度更新就是三部分：  </p>
+<p>说明：<b>完全型粒子群算法更容易保持收敛速度和搜索效果的均衡，是较好的选择</b><br>③最大速度<br>&emsp;&emsp;维护算法的探索能力和开发能力的平衡。较大时，探索能力强，粒子容易飞过最优解；较小时，开发能力强，但是容易陷入局部最优。<br>④邻域的拓扑结构（决定群体历史最优位置）<br>i.全局粒子群算法（所有粒子作为邻域）<br>$\cdot$粒子自己历史最优值<br>$\cdot$粒子群体全局最优值<br>ii.局部粒子群算法（部分粒子作为邻域）<br>$\cdot$粒子自己历史最优值<br>$\cdot$粒子邻域内粒子最优值  </p>
+<p>说明：<b>邻域随迭代次数增大线性变大，最后邻域扩展到整个粒子群。经过实践证明：全局版本的粒子群算法收敛速度快，但是容易陷入局部最优。局部版本的粒子群算法收敛速度慢，但是很难陷入局部最优。现在的粒子群算法大都在收敛速度与摆脱局部最优这两个方面权衡。</b><br>⑤停止准则<br>最大迭代步数/可接受满意度<br>⑥粒子空间初始化<br>&emsp;&emsp;如果有很好的粒子初始化空间，那么将大大缩短收敛实践。<br>&emsp;&emsp;<b>从上面的介绍可以看到，粒子群算法与其他现代优化方法相比的一个明显特色就是所需调整的参数很少。相对而言，惯性因子和邻域定义很重要，这些为数不多的关键参数（我觉得也不少呢…）的设置却对算法的精度和效率有显著影响</b>  </p>
+<h4 id="三-实例"><a href="#三-实例" class="headerlink" title="三.实例"></a>三.实例</h4><p>例：求解如下4维Rosenbrock函数的优化问题：<br>&emsp;&emsp;$\min{f(x)}=\sum_{i=1}^3[100(x_{i+1}-x_{i}^2)^2+(x_i-1)^2],x_i\in[-30,30],i=1,2,3,4$<br>解:算法相关设计分析如下<br>种群大小：算法中粒子数量，取m=5<br>编码：因为问题的维数是4，所以每个粒子的位置和速度都是4维的实数向量<br>设定粒子的最大速度：$V_{max}=60$  </p>
+<h5 id="1-对粒子群进行随机初始化"><a href="#1-对粒子群进行随机初始化" class="headerlink" title="1.对粒子群进行随机初始化"></a>1.对粒子群进行随机初始化</h5><p>&emsp;&emsp;包括随机初始化各粒子的位置和速度，设各粒子的初始位置$x_i^0$和初始速度$v_i^0$，都是1*4的向量  </p>
+<h5 id="2-计算每个粒子的适应值–f-x-min"><a href="#2-计算每个粒子的适应值–f-x-min" class="headerlink" title="2.计算每个粒子的适应值–f(x)min"></a>2.计算每个粒子的适应值–f(x)min</h5><p>&emsp;&emsp;按照${f(x)}=\sum_{i=1}^3[100(x_{i+1}-x_{i}^2)^2+(x_i-1)^2]$计算适应值，取$f(x)_{min}$为作为历史最优解，设$f(x_i^0)$为历史最优解，则有$P_g=x_1^{(0)},P_i=x_i^0,i=1,2,3,4,5$<br>&emsp;&emsp;群体最优解：$P_g=x_1^{(0)}$<br>&emsp;&emsp;个体历史最优解：$P_i=x_i^0,i=1,2,3,4,5$  </p>
+<h5 id="3-更新粒子的速度和位置"><a href="#3-更新粒子的速度和位置" class="headerlink" title="3.更新粒子的速度和位置"></a>3.更新粒子的速度和位置</h5><p>&emsp;&emsp;取$c_0=1,c_1=c_2=2，$得到速度和位置的更新函数，并求出更新速度，再更新位置，再进行第2步，并进行比较，直到达到终止条件  </p>
+<h4 id="四-优化"><a href="#四-优化" class="headerlink" title="四.优化"></a>四.优化</h4><h5 id="1-线性递减权值"><a href="#1-线性递减权值" class="headerlink" title="1.线性递减权值"></a>1.线性递减权值</h5><p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$w=w_{max}-(w_{max}-w_{min})*\frac{run}{run_{max}}$<br>$run$为当前迭代次数，$run_{max}$为算法迭代总次数。较大的$w$有较好的全局收敛能力，较小的$w$有较强的局部收敛能力。因此，随着迭代次数的增加，惯性权重$w$应不断减少，从而使得粒子群算法在初期具有较强的全局收敛能力，而晚期具有较强的局部收敛能力。</p>
+<h5 id="2-收缩因子法"><a href="#2-收缩因子法" class="headerlink" title="2.收缩因子法"></a>2.收缩因子法</h5><p>&emsp;&emsp;引入收缩因子，速度更新公式为<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<br>$v_{id}=K[v_{id}+\varphi_1r_1(pbest_{id}-x_{id})+\varphi_2r_2(gbest_d-x_{id})]$,其中收缩因子$K$为受$\varphi_1,\varphi_2$限制的$w$，$\varphi_1,\varphi_2$是需要预先设定的模型参数<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$K=\frac{2}{2-\varphi-\sqrt{\varphi^2-4\varphi}},\varphi=\varphi_1+\varphi_2,\varphi&gt;4$<br>收缩因子法控制系统行为最终收敛，且可以有效搜索不同区域，该法能得到较高质量的解  </p>
+<h4 id="五-应用"><a href="#五-应用" class="headerlink" title="五.应用"></a>五.应用</h4><p>$\cdot$系统设计（模糊控制器设计）<br>$\cdot$多目标优化<br>$\cdot$分类<br>$\cdot$模式识别（自动目标检测）<br>$\cdot$调度（车间作业调度）<br>$\cdot$信号处理（时频分析）<br>$\cdot$决策<br>$\cdot$机器人应用（机器人实时路径规划）  </p>
+<p><b>研究热点：算法收敛性分析、粒子群拓扑结构、参数选择与优化、与其它演化计算的融合、算法应用</b></p>
+<h4 id="六-不足"><a href="#六-不足" class="headerlink" title="六.不足"></a>六.不足</h4><p>&emsp;&emsp;数学基础薄弱，在收敛性理论、计算性能、实现技术和参数的设置等方面就是玄学。核心是公式，要注重把PSO和进化算法/模糊逻辑/生物质能/混沌等方法和策略结合能够解决PSO局部最优的问题。</p>
+
             </div>
             <hr/>
 
@@ -499,7 +550,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="www.simonworld.cn/tags/index.html">www.simonworld.cn/tags/index.html</a>
+                    <a href="www.simonworld.cn/2020/02/04/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/%E4%B9%9D.%E7%B2%92%E5%AD%90%E7%BE%A4%E7%AE%97%E6%B3%95PSO/">www.simonworld.cn/2020/02/04/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/%E4%B9%9D.%E7%B2%92%E5%AD%90%E7%BE%A4%E7%AE%97%E6%B3%95PSO/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -536,7 +587,23 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">
+                                    <span class="chip bg-color">数学建模</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%99%BA%E8%83%BD%E7%AE%97%E6%B3%95/">
+                                    <span class="chip bg-color">智能算法</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%AE%97%E6%B3%95/">
+                                    <span class="chip bg-color">算法</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%B2%92%E5%AD%90%E7%BE%A4%E7%AE%97%E6%B3%95PSO/">
+                                    <span class="chip bg-color">粒子群算法PSO</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -580,19 +647,21 @@
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/tags/index.html">
+                <a href="/2020/02/04/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/%E4%B9%9D.%E7%B2%92%E5%AD%90%E7%BE%A4%E7%AE%97%E6%B3%95PSO/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="tags">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="专题九：粒子群算法">
                         
-                        <span class="card-title">tags</span>
+                        <span class="card-title">专题九：粒子群算法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            专题九：粒子群算法&emsp;&emsp;智能算法有遗传算法、人工神经网络算法、模拟退火算法等  
+一.粒子群算法简介1.特点简单易行、收敛速度快、设置参数少  
+2.基本思想①源于对鸟群捕食行为的研究②模拟鸟群飞行觅食的行为，通过集体协作
                         
                     </div>
                     <div class="publish-info">
@@ -601,13 +670,37 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            SimonShenm
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/" class="post-category">
+                                    数学建模
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">
+                        <span class="chip bg-color">数学建模</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%99%BA%E8%83%BD%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">智能算法</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">算法</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%B2%92%E5%AD%90%E7%BE%A4%E7%AE%97%E6%B3%95PSO/">
+                        <span class="chip bg-color">粒子群算法PSO</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -615,22 +708,22 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/tags/index.html">
+                <a href="/2020/02/04/hello-world/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="tags">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
                         
-                        <span class="card-title">tags</span>
+                        <span class="card-title">Hello World</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
                         
                     </div>
                     <div class="publish-info">
@@ -639,13 +732,28 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            SimonShenm
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
+                                    教程
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97/">
+                        <span class="chip bg-color">操作指南</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
