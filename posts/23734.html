@@ -4,9 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="专题一:BFS, 计算机科学在读 | 爱生活 | 爱思考">
-    <meta name="description" content=" 专题一:BFS
-">
+    <meta name="keywords" content="一.2019C题：药品危机, 计算机科学在读 | 爱生活 | 爱思考">
+    <meta name="description" content=" 2019C题：药品危机
+
+ 一.问题描述
+背景
+  美国正在经历关于使用合成和非合成阿片类药物的国家危机，无论是治疗和管理疼痛（法 律，处方用途）还是用于娱乐目的（非法，非处方用途）。美国疾病控制中心（CDC）等联邦组织 正在努力“拯救生">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>专题一:BFS | 沿溪行</title>
+    <title>一.2019C题：药品危机 | 沿溪行</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -269,7 +272,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">专题一:BFS</h1>
+                    <h1 class="description center-align post-title">一.2019C题：药品危机</h1>
                 </div>
             </div>
         </div>
@@ -385,16 +388,20 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%AE%97%E6%B3%95/">
-                                <span class="chip bg-color">算法</span>
+                            <a href="/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">
+                                <span class="chip bg-color">数学建模</span>
                             </a>
                         
-                            <a href="/tags/%E7%BC%96%E7%A8%8B/">
-                                <span class="chip bg-color">编程</span>
+                            <a href="/tags/%E5%85%83%E8%83%9E%E8%87%AA%E5%8A%A8%E6%9C%BA/">
+                                <span class="chip bg-color">元胞自动机</span>
                             </a>
                         
-                            <a href="/tags/BFS/">
-                                <span class="chip bg-color">BFS</span>
+                            <a href="/tags/KNN/">
+                                <span class="chip bg-color">KNN</span>
+                            </a>
+                        
+                            <a href="/tags/%E8%AE%BA%E6%96%87/">
+                                <span class="chip bg-color">论文</span>
                             </a>
                         
                     </div>
@@ -405,8 +412,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%AE%97%E6%B3%95%E7%BC%96%E7%A8%8B/" class="post-category">
-                                算法编程
+                            <a href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-%E7%BE%8E%E8%B5%9B%E8%AE%BA%E6%96%87%E8%AF%BB%E7%9D%80%E7%8E%A9/" class="post-category">
+                                数学建模/美赛论文读着玩
                             </a>
                         
                     </div>
@@ -418,7 +425,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-12
+                    2020-02-17
                 </div>
                 
 
@@ -427,14 +434,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4
+                    2.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    9 分
                 </div>
                 
 
@@ -450,7 +457,57 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="center专题一bfscenter"><a class="markdownIt-Anchor" href="#center专题一bfscenter"></a> <center>专题一:BFS</center></h2>
+                <h2 id="center2019c题药品危机center"><a class="markdownIt-Anchor" href="#center2019c题药品危机center"></a> <center>2019C题：药品危机</center></h2>
+<hr>
+<h4 id="一问题描述"><a class="markdownIt-Anchor" href="#一问题描述"></a> 一.问题描述</h4>
+<p><b>背景</b><br />
+  美国正在经历关于使用合成和非合成阿片类药物的国家危机，无论是治疗和管理疼痛（法 律，处方用途）还是用于娱乐目的（非法，非处方用途）。美国疾病控制中心（CDC）等联邦组织 正在努力“拯救生命并预防这种流行病对健康的负面影响，如阿片类药物使用障碍，肝炎和艾滋 病毒感染以及新生儿戒断综合症。”1 只是强制执行现行法律对联邦调查局（FBI）和美国缉毒局 （DEA）等都是一项复杂的挑战。对美国经济的重要部门也有影响。例如，如果阿片类药物危机扩散到美国人口的所有横截面（包 括受过大学教育的人和具有高级学位的人），那么企业需要精确的劳动技能，高技术组件装配以 及与客户的敏感信任或安全关系。客户可能难以填补这些职位。此外，如果老年人中阿片类药物 成瘾的比例增加，医疗保健费用和辅助生活设施的人员配置也将受到影响。<br />
+  DEA /国家法医实验室信息系统（NFLIS）作为缉毒局（DEA）转移控制办公室的一部分，发布了 一份数据密集的年度报告，涉及“联邦，州分析的药物鉴定结果和相关信息”和当地的法医实验 室。“NFLIS内的数据库包括来自犯罪实验室的数据，这些数据处理了该国估计每年120万州和地 方毒品案件的88％。对于这个问题，我们关注位于美国五（5）个州的个别县：俄亥俄州，肯塔 基州，西弗吉尼亚州，弗吉尼亚州和田纳西州。在美国，一个县是每个拥有税务权的州下面的下一级政府。<br />
+  提供此问题描述的是几个供您使用的数据集。第一份文件（MCM_NFLIS_Data.xlsx）包含20102017年麻醉镇痛药（合成阿片类药物）和海洛因的药物鉴定计数，这些药物来自这五个州的每个 县，由各州的犯罪实验室向DEA报告。当执法机构向犯罪实验室提交证据作为刑事调查的一部分 并且实验室的法医科学家对证据进行检验时，就会发生药物鉴定。通常，当执法机构提交这些样 本时，他们会提供位置数据（县）及其事故报告。当证据提交给犯罪实验室并且未提供此位置数 据时，犯罪实验室使用提交案件的市/县/州调查执法组织的位置。出于此问题的目的，您可以假 设县位置数据是正确的。<br />
+  另外七（7）个文件是压缩文件夹，其中包含美国人口普查局的摘录，这些摘录代表了20102016每年中为这五个州的县收集的一组共同的社会经济因素（ACS_xx_5YR_DP02.zip）。（注： 2017年没有相同的数据。）每个数据集都有一个代码表，用于定义所记录的每个变量。虽然您可以使用其他资源进行研 究和背景信息，但提供的数据集包含您应该使用的唯一数据来解决此问题。<br />
+<b>问题</b><br />
+<b>第1部分</b><br />
+  使用提供的NFLIS数据，建立一个数学模型来描述五个州及其县之间和之间报告的合成 阿片类药物和海洛因事件（病例）的传播和特征。使用您的模型，确定在五种状态中每种状态下 可能已开始使用特定阿片类药物的任何可能位置。如果您的团队确定的模式和特征继续存在，美国政府应该有任何具体问题吗？在这些药物识别 阈值水平发生这些情况？您的模型何时何地预测它们将来会发生？<br />
+<b>第2部分</b><br />
+  使用美国人口普查提供的社会经济数据，解决以下问题： <br />
+有许多相互竞争的假设被提供作为阿片类药物使用如何达到目前水平的解释，使用/滥用阿片 类药物，促使阿片类药物使用和成瘾增长的原因，以及为什么阿片类药物的使用仍然存在已知 的危险。使用或趋势是否与某些美国人口普查提供的社会经济数据有关？如果是这样，请从第 1部分修改模型以包含此数据集中的任何重要因素。<br />
+<b>第3部分</b><br />
+  最后，结合您的第1部分和第2部分结果，确定可能的对抗阿片类药物危机的策略。 使用您的模型来测试该策略的有效性;识别成功（或失败）所依赖的任何重要参数界限。<br />
+  除了主要报告之外，还要向首席管理员提供1-2页的备忘录，DEA / NFLIS数据库，总结您 在此建模过程中发现的任何重要见解或结果。<br />
+<b>您的提交应包括</b><br />
+• 一页摘要表,<br />
+• 一到两页的备忘录，<br />
+• 您的解决方案不超过20页，最多23页，包括您的摘要和备忘录。<br />
+• 注意：参考列表和任何附录不计入23页的限制，应在完成的解决方案后显示。<br />
+<b>名词解释</b> <br />
+•镇痛药 - 缓解疼痛的药物<br />
+•县 - （在美国）国家的行政或政治分支;具有特定边界和某种程度的政府权威的 地区。<br />
+•海洛因 - 由吗啡（从某些罂粟植物的种子荚中提取的天然物质）加工而成的一 种非法的，产生欣快感的高度上瘾镇痛药。<br />
+•非合成阿片类药物 - 一种由鸦片叶中提取化学物质制成的药物，如吗啡， 可待因，海洛因,往很容易上瘾 。<br />
+•社会经济因素 - 社会中描述社会和经济地位与阶级之间关系的因素，如教育， 收入，职业和就业。<br />
+•合成阿片类药物 - 人造阿片类药物</p>
+</hr>
+<hr></hr>
+<h4 id="二the-current-statusfuture-and-strategy-of-opioid"><a class="markdownIt-Anchor" href="#二the-current-statusfuture-and-strategy-of-opioid"></a> 二.<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>T</mi><mi>h</mi><mi>e</mi><mtext> </mtext><mi>C</mi><mi>u</mi><mi>r</mi><mi>r</mi><mi>e</mi><mi>n</mi><mi>t</mi><mtext> </mtext><mi>S</mi><mi>t</mi><mi>a</mi><mi>t</mi><mi>u</mi><mi>s</mi><mo separator="true">,</mo><mi>F</mi><mi>u</mi><mi>t</mi><mi>u</mi><mi>r</mi><mi>e</mi><mtext> </mtext><mi>a</mi><mi>n</mi><mi>d</mi><mtext> </mtext><mi>S</mi><mi>t</mi><mi>r</mi><mi>a</mi><mi>t</mi><mi>e</mi><mi>g</mi><mi>y</mi><mtext> </mtext><mi>o</mi><mi>f</mi><mtext> </mtext><mi>O</mi><mi>p</mi><mi>i</mi><mi>o</mi><mi>i</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">The\ Current\ Status,Future\ and\ Strategy\ of\ Opioid</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault">h</span><span class="mord mathdefault">e</span><span class="mspace"> </span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault">u</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mspace"> </span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault">t</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">u</span><span class="mord mathdefault">s</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mord mathdefault">u</span><span class="mord mathdefault">t</span><span class="mord mathdefault">u</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mspace"> </span><span class="mord mathdefault">a</span><span class="mord mathdefault">n</span><span class="mord mathdefault">d</span><span class="mspace"> </span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mspace"> </span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mspace"> </span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mord mathdefault">p</span><span class="mord mathdefault">i</span><span class="mord mathdefault">o</span><span class="mord mathdefault">i</span><span class="mord mathdefault">d</span></span></span></span></h4>
+<p>  这是我读的文章然后基本上在ipad上面做了很多标注，下面对我目前比较陌生的几个东西去搞懂它做个记录。</p>
+<h5 id="1knn"><a class="markdownIt-Anchor" href="#1knn"></a> 1.KNN</h5>
+<h5 id="1基本概念"><a class="markdownIt-Anchor" href="#1基本概念"></a> ①基本概念</h5>
+<p>  其实就是之前模式识别/机器学习里面讲过的k近邻，好吧，看看wiki官方怎么解释这个的吧：<br />
+  在模式识别领域中，最近邻居法（KNN算法，又译K-近邻算法）是一种用于分类和回归的非参数统计方法[1]。在这两种情况下，输入包含特征空间（Feature Space）中的k个最接近的训练样本。<br />
+  在k-NN分类中，输出是一个分类族群。一个对象的分类是由其邻居的“多数表决”确定的，k个最近邻居（k为正整数，通常较小）中最常见的分类决定了赋予该对象的类别。若k = 1，则该对象的类别直接由最近的一个节点赋予。<br />
+  在k-NN回归中，输出是该对象的属性值。该值是其k个最近邻居的值的平均值。最近邻居法采用向量空间模型来分类，概念为相同类别的案例，彼此的相似度高，而可以借由计算与已知类别案例之相似度，来评估未知类别案例可能的分类。<br />
+  K-NN是一种基于实例的学习，或者是局部近似和将所有计算推迟到分类之后的惰性学习。k-近邻算法是所有的机器学习算法中最简单的之一。<br />
+  无论是分类还是回归，衡量邻居的权重都非常有用，使较近邻居的权重比较远邻居的权重大。例如，一种常见的加权方案是给每个邻居权重赋值为1/ d，其中d是到邻居的距离。[注 1]<br />
+  邻居都取自一组已经正确分类（在回归的情况下，指属性值正确）的对象。虽然没要求明确的训练步骤，但这也可以当作是此算法的一个训练样本集。<br />
+  k-近邻算法的缺点是对数据的局部结构非常敏感。本算法与K-平均算法（另一流行的机器学习技术）没有任何关系，请勿与之混淆</p>
+<h5 id="2算法"><a class="markdownIt-Anchor" href="#2算法"></a> ②算法</h5>
+<p>  训练样本是多维特征空间向量，其中每个训练样本带有一个类别标签。算法的训练阶段只包含存储的特征向量和训练样本的标签。<br />
+  在分类阶段，k是一个用户定义的常数。一个没有类别标签的向量（查询或测试点）将被归类为最接近该点的k个样本点中最频繁使用的一类。<br />
+  一般情况下，将欧氏距离作为距离度量，但是这是只适用于连续变量。在文本分类这种离散变量情况下，另一个度量——重叠度量（或海明距离）可以用来作为度量。例如对于基因表达微阵列数据，k-NN也与Pearson和Spearman相关系数结合起来使用。[2]通常情况下，如果运用一些特殊的算法来计算度量的话，k近邻分类精度可显著提高，如运用大间隔最近邻居或者邻里成分分析法。<br />
+  “多数表决”分类会在类别分布偏斜时出现缺陷。也就是说，出现频率较多的样本将会主导测试点的预测结果，因为他们比较大可能出现在测试点的K邻域而测试点的属性又是通过k邻域内的样本计算出来的。[3]解决这个缺点的方法之一是在进行分类时将样本到k个近邻点的距离考虑进去。k近邻点中每一个的分类（对于回归问题来说，是数值）都乘以与测试点之间距离的成反比的权重。另一种克服偏斜的方式是通过数据表示形式的抽象。例如，在自组织映射（SOM）中，每个节点是相似的点的一个集群的代表（中心），而与它们在原始训练数据的密度无关。K-NN可以应用到SOM中。</p>
+<h5 id="3程序模板"><a class="markdownIt-Anchor" href="#3程序模板"></a> ③程序模板</h5>
+<code>
+</code>
 
             </div>
             <hr/>
@@ -476,7 +533,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="www.simonworld.cn/posts/44924.html">www.simonworld.cn/posts/44924.html</a>
+                    <a href="www.simonworld.cn/posts/23734.html">www.simonworld.cn/posts/23734.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -514,16 +571,20 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%AE%97%E6%B3%95/">
-                                    <span class="chip bg-color">算法</span>
+                                <a href="/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">
+                                    <span class="chip bg-color">数学建模</span>
                                 </a>
                             
-                                <a href="/tags/%E7%BC%96%E7%A8%8B/">
-                                    <span class="chip bg-color">编程</span>
+                                <a href="/tags/%E5%85%83%E8%83%9E%E8%87%AA%E5%8A%A8%E6%9C%BA/">
+                                    <span class="chip bg-color">元胞自动机</span>
                                 </a>
                             
-                                <a href="/tags/BFS/">
-                                    <span class="chip bg-color">BFS</span>
+                                <a href="/tags/KNN/">
+                                    <span class="chip bg-color">KNN</span>
+                                </a>
+                            
+                                <a href="/tags/%E8%AE%BA%E6%96%87/">
+                                    <span class="chip bg-color">论文</span>
                                 </a>
                             
                         </div>
@@ -564,9 +625,76 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/posts/23734.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="" class="responsive-img" alt="一.2019C题：药品危机">
+                        
+                        <span class="card-title">一.2019C题：药品危机</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                             2019C题：药品危机
+
+ 一.问题描述
+背景
+  美国正在经历关于使用合成和非合成阿片类药物的国家危机，无论是治疗和管理疼痛（法 律，处方用途）还是用于娱乐目的（非法，非处方用途）。美国疾病控制中心（CDC）等联邦组织 正在努力“拯救生
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-17
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-%E7%BE%8E%E8%B5%9B%E8%AE%BA%E6%96%87%E8%AF%BB%E7%9D%80%E7%8E%A9/" class="post-category">
+                                    数学建模/美赛论文读着玩
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">
+                        <span class="chip bg-color">数学建模</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%85%83%E8%83%9E%E8%87%AA%E5%8A%A8%E6%9C%BA/">
+                        <span class="chip bg-color">元胞自动机</span>
+                    </a>
+                    
+                    <a href="/tags/KNN/">
+                        <span class="chip bg-color">KNN</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%AE%BA%E6%96%87/">
+                        <span class="chip bg-color">论文</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/posts/28798.html">
                     <div class="card-image">
@@ -588,63 +716,6 @@
   ⋅\cdot⋅在一片森林中随机分配着多个数目
   ⋅\cdot⋅某些树着火会引起临近的树也着火
   ⋅\cdot⋅初始的述目密
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-12
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/" class="post-category">
-                                    数学建模
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">
-                        <span class="chip bg-color">数学建模</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%A4%8D%E6%9D%82/">
-                        <span class="chip bg-color">复杂</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%85%83%E8%83%9E%E8%87%AA%E5%8A%A8%E6%9C%BA/">
-                        <span class="chip bg-color">元胞自动机</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/posts/25549.html">
-                    <div class="card-image">
-                        
-                        <img src="https://s2.ax1x.com/2020/02/12/17MZ8S.png" class="responsive-img" alt="专题九：时间序列分析">
-                        
-                        <span class="card-title">专题九：时间序列分析</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                             专题十：时间序列分析
-  时间序列：将同一统计指标的数值按其发生的时间先后顺序排列而成的数列。时间序列模型也成为回归模型，一方面承认事物发展的延续性，运用过去时间序列的数据进行统计就可以推测事物的发展趋势；另一方面，充分考虑到偶然因素影响
                         
                     </div>
                     <div class="publish-info">
@@ -670,12 +741,12 @@
                         <span class="chip bg-color">数学建模</span>
                     </a>
                     
-                    <a href="/tags/%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E5%88%86%E6%9E%90/">
-                        <span class="chip bg-color">时间序列分析</span>
+                    <a href="/tags/%E5%A4%8D%E6%9D%82/">
+                        <span class="chip bg-color">复杂</span>
                     </a>
                     
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E9%A2%84%E6%B5%8B/">
-                        <span class="chip bg-color">数据预测</span>
+                    <a href="/tags/%E5%85%83%E8%83%9E%E8%87%AA%E5%8A%A8%E6%9C%BA/">
+                        <span class="chip bg-color">元胞自动机</span>
                     </a>
                     
                 </div>
@@ -823,7 +894,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">6.4k</span>&nbsp;字
+                class="white-color">7.8k</span>&nbsp;字
             
             
             
