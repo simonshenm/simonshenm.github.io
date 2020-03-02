@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>什么是有监督学习和无监督学习？</title>
+      <link href="/posts/13502.html"/>
+      <url>/posts/13502.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="centersupervised-vs-unsupervised-learningcenter"><a class="markdownIt-Anchor" href="#centersupervised-vs-unsupervised-learningcenter"></a> <center>Supervised Vs. Unsupervised Learning</center></h2><h4 id="为什么要写这个"><a class="markdownIt-Anchor" href="#为什么要写这个"></a> 为什么要写这个？</h4><p>  最近想要系统的学习以下机器学习，老师推荐了Andrew Ng的机器学习，先看看吧，最近有点忙，就不码字了，就基本上在笔记本上写好了然后导入图片好了。<br />  今天学习的就是关于两大类问题的简介，就是无监督学习和有监督学习。<br /><img src="https://s2.ax1x.com/2020/03/02/3WeukT.png" alt="Structure Of 2 Probleams" /></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 机器学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 机器学习 </tag>
+            
+            <tag> 有监督 </tag>
+            
+            <tag> 无监督 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>什么是K-means</title>
       <link href="/posts/36235.html"/>
       <url>/posts/36235.html</url>
