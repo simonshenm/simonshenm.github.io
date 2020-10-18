@@ -440,14 +440,14 @@ autoauto- [笔记：Open Set Domain Adaption by Backpropagation](#center">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.8k
+                    2.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    7 分
                 </div>
                 
 
@@ -465,12 +465,31 @@ autoauto- [笔记：Open Set Domain Adaption by Backpropagation](#center">
             <div id="articleContent">
                 <h2 id="center笔记open-set-domain-adaption-by-backpropagation"><a class="markdownIt-Anchor" href="#center笔记open-set-domain-adaption-by-backpropagation"></a> <center>笔记：Open Set Domain Adaption by Backpropagation</h2>
 <h3 id="文章结构"><a class="markdownIt-Anchor" href="#文章结构"></a> 文章结构</h3>
-<!-- TOC -->autoauto- [<center>笔记：Open Set Domain Adaption by Backpropagation](#center笔记open-set-domain-adaption-by-backpropagation)auto    - [文章结构](#文章结构)auto    - [0. Abstract](#0-abstract)auto        - [Q & A](#q--a)auto            - [1. Open Set DA Vs. Close Set DA ?](#1-open-set-da-vs-close-set-da-)auto            - [2. Adversarial Training ?](#2-adversarial-training-)auto    - [1. Introduction](#1-introduction)autoauto<!-- /TOC -->
+<!-- TOC -->autoauto- [<center>笔记：Open Set Domain Adaption by Backpropagation](#center笔记open-set-domain-adaption-by-backpropagation)auto    - [文章结构](#文章结构)auto    - [0. Abstract](#0-abstract)auto        - [Key](#key)auto        - [Q & A](#q--a)auto            - [1. Close Set and Open Set?](#1-close-set-and-open-set)auto            - [2. Distribution Matching method?](#2-distribution-matching-method)auto            - [3. Adversarial Training ?](#3-adversarial-training-)auto    - [1. Introduction](#1-introduction)auto        - [Key](#key-1)auto        - [Q & A](#q--a-1)auto    - [5. Conclusion](#5-conclusion)auto    - [6. Acknowledgements](#6-acknowledgements)autoauto<!-- /TOC -->
 <h3 id="0-abstract"><a class="markdownIt-Anchor" href="#0-abstract"></a> 0. Abstract</h3>
 <p>许多的算法都被用于从一个有标签的源域到一个标签稀少的目标域的迁移学习。绝大多数的算法都是为了在闭合集情景下使用的，闭合集，就是源域和目标域完全共享同一个样本的种类。然而在实际中，一个目标域往往包含一些不属于源域的样本种类。我们把这些种类叫做“未知类”，一些在开放集下的算法真的非常有用。然而，绝大多数域自适应的现有分布匹配方法在这种配置下并不能很好工作，因为未知的目标样本不应该与源样本对齐。在这篇文章中，我们提出一种在开放集域自适应情景下的利用对抗学习的方法。这个方法可以从一些已知目标样本中分离出来的未知目标样本提取特征。在训练过程中，我们为特征生成器指定了2种选择：将目标样本和已知源样本对齐处理/将其视为未知目标样本。我们的方法经过广泛地评估，和其他的方法相比，我们的方法在大多数的情况下表现更加良好。</p>
+<h4 id="key"><a class="markdownIt-Anchor" href="#key"></a> Key</h4>
+<!--TOC-->
+<ul>
+<li><a href="">1. Close set scenario(Previous algorithms,e.g. distribution matching methods)</a></li>
+<li><a href="">2. Open set scenario(Practical and ours)</a></li>
+<li><a href="">3. Adversarial learning(What we use)</a>
+<ul>
+<li><a href="">3.1. Aligning target samples with source known ones</a></li>
+<li><a href="">3.2. Reject target samples as unknown target ones</a></li>
+</ul>
+</li>
+</ul>
+<!--/TOC-->
 <h4 id="q-a"><a class="markdownIt-Anchor" href="#q-a"></a> Q &amp; A</h4>
-<h5 id="1-open-set-da-vs-close-set-da"><a class="markdownIt-Anchor" href="#1-open-set-da-vs-close-set-da"></a> 1. Open Set DA Vs. Close Set DA ?</h5>
-<h5 id="2-adversarial-training"><a class="markdownIt-Anchor" href="#2-adversarial-training"></a> 2. Adversarial Training ?</h5>
+<h5 id="1-close-set-and-open-set"><a class="markdownIt-Anchor" href="#1-close-set-and-open-set"></a> 1. Close Set and Open Set?</h5>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⋅</mo></mrow><annotation encoding="application/x-tex">\cdot</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.44445em;vertical-align:0em;"></span><span class="mord">⋅</span></span></span></span> Close Set: Source and target domain completely share the class of their samples.</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⋅</mo></mrow><annotation encoding="application/x-tex">\cdot</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.44445em;vertical-align:0em;"></span><span class="mord">⋅</span></span></span></span> Open Set: More practically, a target domain can contain samples of classes that are not shared by the source domain.</p>
+<p><img src="https://s1.ax1x.com/2020/10/18/0OjlOU.png" alt="" /></p>
+<h5 id="2-distribution-matching-method"><a class="markdownIt-Anchor" href="#2-distribution-matching-method"></a> 2. Distribution Matching method?</h5>
+<p>I don’t know …(2020.10.18 10:00:00)</p>
+<h5 id="3-adversarial-training"><a class="markdownIt-Anchor" href="#3-adversarial-training"></a> 3. Adversarial Training ?</h5>
+<p>I don’t know …(2020.10.18 10:00:00)</p>
 <h3 id="1-introduction"><a class="markdownIt-Anchor" href="#1-introduction"></a> 1. Introduction</h3>
 <p>深度神经网络在血多图像识别任务上有出色的表现。在这些方法中有一个基本的问题就是它们无法识别未知样本，所谓未知样本，就是说它们的种类是没有经过训练的。我们把这种种类就叫做“未知类”，而经过训练过程的种类就叫做“已知类”。如果这些样本被识别为未知类，我们可以整理噪声数据集然后把一些对其有兴趣的样本移除。此外，如果机器人在现实世界工作时可以探测到未知的物品然后让注释者给物品打上标签，那么这些机器人就能够很容易地扩展它们的知识。因此，开放集识别是一个非常重要的问题。</p>
 <p>在域自适应中，我们主要是想从有标签的源域训练一个分类器然后把它用于无/少标签的目标域中。在不同域中的样本有不同的特征，这降低了在不同域中训练得到的分类器的表现。许多DA的问题都假设在目标域中的样本都一定术语源域中的某一类。然而，这个假设是不切实际的。考虑一个只有没标签的样本的无监督的DA问题。我们是无法指导目标样本是一定属于源域的某一类的，因为它们连标签都没有。因此，开放集识别算法在DA中是有需求的。对于这个问题，开放集DA这个任务是最近在[2]中被提出中，在文章中提到，目标域包含的样本不属于源域中某一类。任务的目标是想将未知的目标样本分类为未知类。然而，采集未知源样本也同样是一件昂贵的事情，因为我们必须采集大量不同的未知源样本以得到“未知”这个概念。接下来，在我们的这篇文章中，我们提出一个更有挑战性的开放集DA(OSDA)，它不用提供任何未知源样本，我们提出了实现上述的一个方法。也就是说，我们提出了一个只用获取的已知源样本和未标记的目标样本去实现OSDA的方法。</p>
@@ -482,6 +501,16 @@ autoauto- [笔记：Open Set Domain Adaption by Backpropagation](#center">
 <li>我们提出的一种全新的对抗学习方法。这种方法让特征生成器通过训练去学习能够将未知目标样本从已知目标样本中分离开来。</li>
 <li>我们评估了我们的方法在数字和目标数据集上的适应性，并且演示了我们的方法的有效性。此外，我们的方法的有效性在标准开放集识别实验中也进行了演示，在实验中，我们是通过未标记的未知样本进行训练的。</li>
 </ol>
+<h4 id="key-2"><a class="markdownIt-Anchor" href="#key-2"></a> Key</h4>
+<!--TOC-->
+<ul>
+<li>[]</li>
+</ul>
+<!--/TOC-->
+<h4 id="q-a-2"><a class="markdownIt-Anchor" href="#q-a-2"></a> Q &amp; A</h4>
+<h3 id="5-conclusion"><a class="markdownIt-Anchor" href="#5-conclusion"></a> 5. Conclusion</h3>
+<p>在这片文章中，我们提出了一种新的基于对抗学习方法的OSDA。我们提出的方法确保了能将未知目标样本从已知目标样本中分离出来的特征的生成，这是和现有的分布匹配方法很不同的。此外，我们的方法不需要未知源样本。通过广泛的实验，我们方法的有效性得到了验证。提高我们方法在开放集识别的性能会是我们未来的方向。</p>
+<h3 id="6-acknowledgements"><a class="markdownIt-Anchor" href="#6-acknowledgements"></a> 6. Acknowledgements</h3>
 
             </div>
             <hr/>
@@ -875,7 +904,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">18.1k</span>&nbsp;字
+                class="white-color">18.4k</span>&nbsp;字
             
             
             
