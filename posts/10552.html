@@ -7,7 +7,13 @@
     <meta name="keywords" content="笔记：Open Set Domain Adaption by Backpropagation, 计算机科学在读 | 爱生活 | 爱思考">
     <meta name="description" content=" 笔记：Open Set Domain Adaption by Backpropagation
  文章结构
-autoauto- [笔记：Open Set Domain Adaption by Backpropagation](#center">
+
+
+0. Abstract
+1. Introduction
+2. Related Work
+
+2.1. Domain Adaptio">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -265,7 +271,7 @@ autoauto- [笔记：Open Set Domain Adaption by Backpropagation](#center">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s1.ax1x.com/2020/10/18/0XSHbT.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s1.ax1x.com/2020/10/18/0X9w6I.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -465,7 +471,35 @@ autoauto- [笔记：Open Set Domain Adaption by Backpropagation](#center">
             <div id="articleContent">
                 <h2 id="center笔记open-set-domain-adaption-by-backpropagation"><a class="markdownIt-Anchor" href="#center笔记open-set-domain-adaption-by-backpropagation"></a> <center>笔记：Open Set Domain Adaption by Backpropagation</h2>
 <h3 id="文章结构"><a class="markdownIt-Anchor" href="#文章结构"></a> 文章结构</h3>
-<!-- TOC -->autoauto- [<center>笔记：Open Set Domain Adaption by Backpropagation](#center笔记open-set-domain-adaption-by-backpropagation)auto    - [文章结构](#文章结构)auto    - [0. Abstract](#0-abstract)auto        - [Key](#key)auto        - [Q & A](#q--a)auto            - [1. Close Set and Open Set?](#1-close-set-and-open-set)auto            - [2. Distribution Matching method?](#2-distribution-matching-method)auto            - [3. Adversarial Training ?](#3-adversarial-training-)auto    - [1. Introduction](#1-introduction)auto        - [Key](#key-1)auto        - [Q & A](#q--a-1)auto    - [5. Conclusion](#5-conclusion)auto    - [6. Acknowledgements](#6-acknowledgements)autoauto<!-- /TOC -->
+<!--TOC-->
+<ul>
+<li><a href="">0. Abstract</a></li>
+<li><a href="">1. Introduction</a></li>
+<li><a href="">2. Related Work</a>
+<ul>
+<li><a href="">2.1. Domain Adaption</a></li>
+<li><a href="">2.2. Open Set Recognition</a></li>
+</ul>
+</li>
+<li><a href="">3. Method</a>
+<ul>
+<li><a href="">3.1. Problem Setting and Overall Idea</a></li>
+<li><a href="">3.2. Training Procedure</a></li>
+<li><a href="">3.3. Comparison with Existing Methods</a></li>
+</ul>
+</li>
+<li><a href="">4. Experiments</a>
+<ul>
+<li><a href="">4.1. Implementation Detail</a></li>
+<li><a href="">4.2. Experiments on Office</a></li>
+<li><a href="">4.3. Experiments on VisDA Dataset</a></li>
+<li><a href="">4.4. Experiments on Digits Dataset</a></li>
+</ul>
+</li>
+<li><a href="">5. Conclusion</a></li>
+<li><a href="">6. Acknowledgements</a></li>
+</ul>
+<!--/TOC-->
 <h3 id="0-abstract"><a class="markdownIt-Anchor" href="#0-abstract"></a> 0. Abstract</h3>
 <p>许多的算法都被用于从一个有标签的源域到一个标签稀少的目标域的迁移学习。绝大多数的算法都是为了在闭合集情景下使用的，闭合集，就是源域和目标域完全共享同一个样本的种类。然而在实际中，一个目标域往往包含一些不属于源域的样本种类。我们把这些种类叫做“未知类”，一些在开放集下的算法真的非常有用。然而，绝大多数域自适应的现有分布匹配方法在这种配置下并不能很好工作，因为未知的目标样本不应该与源样本对齐。在这篇文章中，我们提出一种在开放集域自适应情景下的利用对抗学习的方法。这个方法可以从一些已知目标样本中分离出来的未知目标样本提取特征。在训练过程中，我们为特征生成器指定了2种选择：将目标样本和已知源样本对齐处理/将其视为未知目标样本。我们的方法经过广泛地评估，和其他的方法相比，我们的方法在大多数的情况下表现更加良好。</p>
 <h4 id="key"><a class="markdownIt-Anchor" href="#key"></a> Key</h4>
@@ -636,7 +670,7 @@ autoauto- [笔记：Open Set Domain Adaption by Backpropagation](#center">
                 <a href="/posts/10552.html">
                     <div class="card-image">
                         
-                        <img src="https://s1.ax1x.com/2020/10/18/0XSHbT.png" class="responsive-img" alt="笔记：Open Set Domain Adaption by Backpropagation">
+                        <img src="https://s1.ax1x.com/2020/10/18/0X9w6I.png" class="responsive-img" alt="笔记：Open Set Domain Adaption by Backpropagation">
                         
                         <span class="card-title">笔记：Open Set Domain Adaption by Backpropagation</span>
                     </div>
@@ -646,7 +680,13 @@ autoauto- [笔记：Open Set Domain Adaption by Backpropagation](#center">
                         
                              笔记：Open Set Domain Adaption by Backpropagation
  文章结构
-autoauto- [笔记：Open Set Domain Adaption by Backpropagation](#center
+
+
+0. Abstract
+1. Introduction
+2. Related Work
+
+2.1. Domain Adaptio
                         
                     </div>
                     <div class="publish-info">
