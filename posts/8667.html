@@ -4,18 +4,22 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Pytorch实践：kaggle Digit Recognizer, 计算机科学在读 | 爱生活 | 爱思考">
-    <meta name="description" content=" 实践：Pytorch实现MNIST识别
- 一. 在本地直接用MNIST数据集识别
- 1.代码
+    <meta name="keywords" content="机器学习1：绪论, 计算机科学在读 | 爱生活 | 爱思考">
+    <meta name="description" content=" 机器学习：绪论
+ 基本术语
 
-
-# 准备数据
-
-#1.导入必要模块
-import numpy as np
-import torch
-from torchvision.dat">
+数据集：记录的集合
+样本：示例
+特征：属性
+样本空间：输入空间
+特征向量：空间中的每一个点对应一个坐标向量
+训练
+训练数据
+训练样本
+训练集合：训练样本组成的集合
+分类
+回归
+监督学习（有标签），无监督学习（">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -23,7 +27,7 @@ from torchvision.dat">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Pytorch实践：kaggle Digit Recognizer | 沿溪行</title>
+    <title>机器学习1：绪论 | 沿溪行</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -273,12 +277,12 @@ from torchvision.dat">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s1.ax1x.com/2020/10/21/B9cbi6.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s1.ax1x.com/2020/10/13/0hjrNQ.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Pytorch实践：kaggle Digit Recognizer</h1>
+                    <h1 class="description center-align post-title">机器学习1：绪论</h1>
                 </div>
             </div>
         </div>
@@ -394,16 +398,8 @@ from torchvision.dat">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Kaggle/">
-                                <span class="chip bg-color">Kaggle</span>
-                            </a>
-                        
-                            <a href="/tags/Pytorch/">
-                                <span class="chip bg-color">Pytorch</span>
-                            </a>
-                        
-                            <a href="/tags/MNIST/">
-                                <span class="chip bg-color">MNIST</span>
+                            <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                                <span class="chip bg-color">机器学习</span>
                             </a>
                         
                     </div>
@@ -414,16 +410,12 @@ from torchvision.dat">
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Pytorch/" class="post-category">
-                                Pytorch
+                            <a href="/categories/%E8%A5%BF%E7%93%9C%E4%B9%A6/" class="post-category">
+                                西瓜书
                             </a>
                         
-                            <a href="/categories/Pytorch/Kaggle/" class="post-category">
-                                Kaggle
-                            </a>
-                        
-                            <a href="/categories/Pytorch/Kaggle/%E5%AE%9E%E8%B7%B5/" class="post-category">
-                                实践
+                            <a href="/categories/%E8%A5%BF%E7%93%9C%E4%B9%A6/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                机器学习
                             </a>
                         
                     </div>
@@ -435,7 +427,7 @@ from torchvision.dat">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-10-20
+                    2020-10-09
                 </div>
                 
 
@@ -444,14 +436,14 @@ from torchvision.dat">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    540
+                    96
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    1 分
                 </div>
                 
 
@@ -467,143 +459,22 @@ from torchvision.dat">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="center实践pytorch实现mnist识别"><a class="markdownIt-Anchor" href="#center实践pytorch实现mnist识别"></a> <center>实践：Pytorch实现MNIST识别</h2>
-<h3 id="一-在本地直接用mnist数据集识别"><a class="markdownIt-Anchor" href="#一-在本地直接用mnist数据集识别"></a> 一. 在本地直接用MNIST数据集识别</h3>
-<h4 id="1代码"><a class="markdownIt-Anchor" href="#1代码"></a> 1.代码</h4>
-<pre class="highlight"><code class="python">
-
-<span class="hljs-comment"># 准备数据</span>
-
-<span class="hljs-comment">#1.导入必要模块</span>
-<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
-<span class="hljs-keyword">import</span> torch
-<span class="hljs-keyword">from</span> torchvision.datasets <span class="hljs-keyword">import</span> mnist
-<span class="hljs-keyword">import</span> torchvision.transforms <span class="hljs-keyword">as</span> transforms
-<span class="hljs-keyword">from</span> torch.utils.data <span class="hljs-keyword">import</span> DataLoader
-<span class="hljs-keyword">import</span> torch.nn.functional <span class="hljs-keyword">as</span> F
-<span class="hljs-keyword">import</span> torch.optim <span class="hljs-keyword">as</span> optim
-<span class="hljs-keyword">from</span> torch <span class="hljs-keyword">import</span> nn
-
-<span class="hljs-comment">#2.定义超参数</span>
-train_batch_size=<span class="hljs-number">64</span>
-test_batch_size=<span class="hljs-number">128</span>
-lr=<span class="hljs-number">.01</span>
-num_epoches=<span class="hljs-number">25</span>
-momentum=<span class="hljs-number">0.5</span>
-
-<span class="hljs-comment">#下载数据集并进行预处理</span>
-tranform=transforms.Compose([transforms.ToTensor(),transforms.Normalize([<span class="hljs-number">0.5</span>],[<span class="hljs-number">0.5</span>])])
-train_dataset=mnist.MNIST(<span class="hljs-string">'./data'</span>,train=<span class="hljs-literal">True</span>,transform=transform,download=<span class="hljs-literal">True</span>)
-test_dataset=mnist.MNIST(<span class="hljs-string">'./data'</span>,train=<span class="hljs-literal">False</span>,transform=transform)
-train_loader=DataLoader(train_dataset,batch_size=train_batch_size,shuffle=<span class="hljs-literal">True</span>)
-test_loader=DataLoader(test_dataset,batch_size=test_batch_size,shuffle=<span class="hljs-literal">False</span>)
-
-<span class="hljs-comment">#可视化数据</span>
-<span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt
-
-examples=enumerate(test_loader)
-batch_idx,(example_data,example_targets)=next(examples)
-
-fig=plt.figure()
-<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">6</span>):
-    plt.subplot(<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,(i+<span class="hljs-number">1</span>))
-    plt.tight_layout()
-    plt.imshow(example_data[i][<span class="hljs-number">0</span>],cmap=<span class="hljs-string">'gray'</span>,interpolation=<span class="hljs-string">'none'</span>)
-    plt.title(<span class="hljs-string">"Ground Truth:{}"</span>.format(example_targets[i]))
-    plt.xticks([])
-    plt.yticks([])
-    
-<span class="hljs-comment">#构建模型</span>
-
-<span class="hljs-comment">#1.构建网络</span>
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Net</span><span class="hljs-params">(nn.Module)</span>:</span>
-    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self,in_dim,n_hidden_1,n_hidden_2,out_dim)</span>:</span>
-        super(Net,self).__init__()
-        self.layer1=nn.Sequential(nn.Linear(in_dim,n_hidden_1),nn.BatchNorm1d(n_hidden_1))
-        self.layer2=nn.Sequential(nn.Linear(n_hidden_1,n_hidden_2),nn.BatchNorm1d(n_hidden_2))
-        self.layer3=nn.Sequential(nn.Linear(n_hidden_2,out_dim))
-        
-    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self,x)</span>:</span>
-        x=F.relu(self.layer1(x))
-        x=F.relu(self.layer2(x))
-        x=self.layer3(x)
-        <span class="hljs-keyword">return</span> x
-
-<span class="hljs-comment">#2.实例化网络</span>
-device=torch.device(<span class="hljs-string">"cuda 0"</span> <span class="hljs-keyword">if</span> torch.cuda.is_available() <span class="hljs-keyword">else</span> <span class="hljs-string">"cpu"</span>)
-model=Net(<span class="hljs-number">28</span>*<span class="hljs-number">28</span>,<span class="hljs-number">300</span>,<span class="hljs-number">100</span>,<span class="hljs-number">10</span>)
-model.to(device)
-
-criterion=nn.CrossEntropyLoss()
-optimizer=optim.SGD(model.parameters(),lr=lr,momentum=momentum)
-
-<span class="hljs-comment">#训练模型</span>
-
-<span class="hljs-comment">#1.训练模型</span>
-losses=[]
-acces=[]
-eval_losses=[]
-eval_acces=[]
-
-<span class="hljs-keyword">for</span> epoch <span class="hljs-keyword">in</span> range(num_epoches):
-    train_loss=<span class="hljs-number">0</span>
-    train_acc=<span class="hljs-number">0</span>
-    model.train()
-    
-    <span class="hljs-keyword">if</span> epoch%<span class="hljs-number">5</span>==<span class="hljs-number">0</span>:
-        optimizer.param_groups[<span class="hljs-number">0</span>][<span class="hljs-string">'lr'</span>]*=<span class="hljs-number">0.1</span>
-    
-    <span class="hljs-keyword">for</span> img,label <span class="hljs-keyword">in</span> train_loader:
-        img=img.to(device)
-        label=label.to(device)
-        img=img.view(img.size(<span class="hljs-number">0</span>),<span class="hljs-number">-1</span>)
-        
-        out=model(img)
-        loss=criterion(out,label)
-        
-        optimizer.zero_grad()
-        loss.backward()
-        optimizer.step()
-        
-        train_loss+=loss.item()
-        _,pred=out.max(<span class="hljs-number">1</span>)
-        num_correct=(pred==label).sum().item()
-        acc=num_correct/img.shape[<span class="hljs-number">0</span>]
-        train_acc+=acc
-        
-    losses.append(train_loss/len(train_loader))
-    acces.append(train_acc/len(train_loader))
-    
-    eval_loss=<span class="hljs-number">0</span>
-    eval_acc=<span class="hljs-number">0</span>
-    
-    model.eval()
-    <span class="hljs-keyword">for</span> img,label <span class="hljs-keyword">in</span> test_loader:
-        img=img.to(device)
-        label=label.to(device)
-        img=img.view(img.size(<span class="hljs-number">0</span>),<span class="hljs-number">-1</span>)
-        out=model(img)
-        loss=criterion(out,label)
-        
-        eval_loss+=loss.item()
-        _,pred=out.max(<span class="hljs-number">1</span>)
-        num_correct=(pred==label).sum().item()
-        acc=num_correct/img.shape[<span class="hljs-number">0</span>]
-        eval_acc+=acc
-    
-    eval_losses.append(eval_loss/len(test_loader))
-    eval_acces.append(eval_acc/len(test_loader))
-    
-    print(<span class="hljs-string">'epoch:{},Train Loss:{:.4f},Train Acc:{:.4f},Test Loss:{:.4f},Test Acc:{:.4f}'</span>.format(epoch,train_loss/len(train_loader),train_acc/len(train_loader),eval_loss/len(test_loader),eval_acc/len(test_loader)))
-
-plt.plot(np.arange(len(losses)),losses)
-plt.plot(np.arange(len(acces)),acces)
-plt.legend([<span class="hljs-string">'Train Loss'</span>,<span class="hljs-string">'Train Acc'</span>],loc=<span class="hljs-string">'upper right'</span>)
-</code></pre>
-<h4 id="2结果和可视化"><a class="markdownIt-Anchor" href="#2结果和可视化"></a> 2.结果和可视化</h4>
-<p><img src="https://s1.ax1x.com/2020/10/21/B9cyaq.png" alt="Results in epoches" /><br />
-<img src="https://s1.ax1x.com/2020/10/21/B9csZn.png" alt="Curve" /></p>
-<h3 id="二-在kaggle平台上完成digit-recognizer比赛"><a class="markdownIt-Anchor" href="#二-在kaggle平台上完成digit-recognizer比赛"></a> 二. 在Kaggle平台上完成Digit Recognizer比赛</h3>
+                <h2 id="center机器学习绪论"><a class="markdownIt-Anchor" href="#center机器学习绪论"></a> <center>机器学习：绪论</h2>
+<h3 id="基本术语"><a class="markdownIt-Anchor" href="#基本术语"></a> 基本术语</h3>
+<ol>
+<li>数据集：记录的集合</li>
+<li>样本：示例</li>
+<li>特征：属性</li>
+<li>样本空间：输入空间</li>
+<li>特征向量：空间中的每一个点对应一个坐标向量</li>
+<li>训练</li>
+<li>训练数据</li>
+<li>训练样本</li>
+<li>训练集合：训练样本组成的集合</li>
+<li>分类</li>
+<li>回归</li>
+<li>监督学习（有标签），无监督学习（无标签）</li>
+</ol>
 
             </div>
             <hr/>
@@ -629,7 +500,7 @@ plt.legend([<span class="hljs-string">'Train Loss'</span>,<span class="hljs-stri
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="www.simonworld.cn/posts/25108.html">www.simonworld.cn/posts/25108.html</a>
+                    <a href="www.simonworld.cn/posts/8667.html">www.simonworld.cn/posts/8667.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -667,16 +538,8 @@ plt.legend([<span class="hljs-string">'Train Loss'</span>,<span class="hljs-stri
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Kaggle/">
-                                    <span class="chip bg-color">Kaggle</span>
-                                </a>
-                            
-                                <a href="/tags/Pytorch/">
-                                    <span class="chip bg-color">Pytorch</span>
-                                </a>
-                            
-                                <a href="/tags/MNIST/">
-                                    <span class="chip bg-color">MNIST</span>
+                                <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                                    <span class="chip bg-color">机器学习</span>
                                 </a>
                             
                         </div>
@@ -721,49 +584,39 @@ plt.legend([<span class="hljs-string">'Train Loss'</span>,<span class="hljs-stri
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/65303.html">
+                <a href="/posts/60164.html">
                     <div class="card-image">
                         
-                        <img src="https://s1.ax1x.com/2020/11/04/BgIUZ4.png" class="responsive-img" alt="笔记：Open-Set Hypothesis Transfer with Semantic Consistency">
+                        <img src="https://s1.ax1x.com/2020/10/13/0hjrNQ.jpg" class="responsive-img" alt="西瓜书笔记">
                         
-                        <span class="card-title">笔记：Open-Set Hypothesis Transfer with Semantic Consistency</span>
+                        <span class="card-title">西瓜书笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                             文章结构
-
-
-0. Abstract
-1. Introduction
-2. Related work
-
-2.1. Open-set domain adaption
-2.2. Tranformation consistency
-
-
-3. O
+                             机器学习2：模型评估与选择
+ 一. 经验误差与过拟合
+ 1. 基本概念
+① 错误率：E=a/m，m个样本中有a个样本分类错误，分类错误样本数/样本总数
+② 精度：1-E=1-a/m
+③ 误差：学习器的实际预测输出与样本的真实输出之间的差异
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-31
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-12
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%AE%BA%E6%96%87/" class="post-category">
-                                    论文
+                            <a href="/categories/%E8%A5%BF%E7%93%9C%E4%B9%A6/" class="post-category">
+                                    西瓜书
                                 </a>
                             
-                            <a href="/categories/%E8%AE%BA%E6%96%87/Transfer-Learning/" class="post-category">
-                                    Transfer Learning
-                                </a>
-                            
-                            <a href="/categories/%E8%AE%BA%E6%96%87/Transfer-Learning/Domain-Adaption/" class="post-category">
-                                    Domain Adaption
+                            <a href="/categories/%E8%A5%BF%E7%93%9C%E4%B9%A6/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    机器学习
                                 </a>
                             
                             
@@ -773,20 +626,12 @@ plt.legend([<span class="hljs-string">'Train Loss'</span>,<span class="hljs-stri
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Transfer-Learning/">
-                        <span class="chip bg-color">Transfer Learning</span>
+                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">机器学习</span>
                     </a>
                     
-                    <a href="/tags/Domain-Adaption/">
-                        <span class="chip bg-color">Domain Adaption</span>
-                    </a>
-                    
-                    <a href="/tags/Open-Set-Hypothesis-Transfer/">
-                        <span class="chip bg-color">Open Set Hypothesis Transfer</span>
-                    </a>
-                    
-                    <a href="/tags/UODA/">
-                        <span class="chip bg-color">UODA</span>
+                    <a href="/tags/%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E9%80%89%E6%8B%A9/">
+                        <span class="chip bg-color">模型评估与选择</span>
                     </a>
                     
                 </div>
@@ -800,46 +645,32 @@ plt.legend([<span class="hljs-string">'Train Loss'</span>,<span class="hljs-stri
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/10552.html">
+                <a href="/posts/13502.html">
                     <div class="card-image">
                         
-                        <img src="https://s1.ax1x.com/2020/10/18/0X9w6I.png" class="responsive-img" alt="笔记：Open Set Domain Adaption by Backpropagation">
+                        <img src="https://s2.ax1x.com/2020/03/02/3Wem7V.jpg" class="responsive-img" alt="什么是有监督学习和无监督学习？">
                         
-                        <span class="card-title">笔记：Open Set Domain Adaption by Backpropagation</span>
+                        <span class="card-title">什么是有监督学习和无监督学习？</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                             笔记：Open Set Domain Adaption by Backpropagation
- 文章结构
-
-
-0. Abstract
-1. Introduction
-2. Related Work
-
-2.1. Domain Adaptio
+                             Supervised Vs. Unsupervised Learning
+ 为什么要写这个？
+  最近想要系统的学习以下机器学习，老师推荐了Andrew Ng的机器学习，先看看吧，最近有点忙，就不码字了，就基本上在笔记本上写好了然后导入图
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-02
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%AE%BA%E6%96%87/" class="post-category">
-                                    论文
-                                </a>
-                            
-                            <a href="/categories/%E8%AE%BA%E6%96%87/Transfer-Learning/" class="post-category">
-                                    Transfer Learning
-                                </a>
-                            
-                            <a href="/categories/%E8%AE%BA%E6%96%87/Transfer-Learning/Domain-Adaption/" class="post-category">
-                                    Domain Adaption
+                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    机器学习
                                 </a>
                             
                             
@@ -849,20 +680,16 @@ plt.legend([<span class="hljs-string">'Train Loss'</span>,<span class="hljs-stri
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Transfer-Learning/">
-                        <span class="chip bg-color">Transfer Learning</span>
+                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">机器学习</span>
                     </a>
                     
-                    <a href="/tags/Open-Set/">
-                        <span class="chip bg-color">Open Set</span>
+                    <a href="/tags/%E6%9C%89%E7%9B%91%E7%9D%A3/">
+                        <span class="chip bg-color">有监督</span>
                     </a>
                     
-                    <a href="/tags/Domain-Adaption/">
-                        <span class="chip bg-color">Domain Adaption</span>
-                    </a>
-                    
-                    <a href="/tags/OSDA/">
-                        <span class="chip bg-color">OSDA</span>
+                    <a href="/tags/%E6%97%A0%E7%9B%91%E7%9D%A3/">
+                        <span class="chip bg-color">无监督</span>
                     </a>
                     
                 </div>
