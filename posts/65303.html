@@ -6,17 +6,7 @@
     <meta charset="utf-8">
     <meta name="keywords" content="笔记：Open-Set Hypothesis Transfer with Semantic Consistency, 计算机科学在读 | 爱生活 | 爱思考">
     <meta name="description" content=" 文章结构
-
-
-0. Abstract
-1. Introduction
-2. Related work
-
-2.1. Open-set domain adaption
-2.2. Tranformation consistency
-
-
-3. O">
+autoauto- [文章结构](#文章结构)auto- [0. Abstract](#0-abstract)auto- [1. Introduction](#1-introduction)auto- [2. Related w">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -427,8 +417,8 @@
                                 Transfer Learning
                             </a>
                         
-                            <a href="/categories/%E8%AE%BA%E6%96%87/Transfer-Learning/Domain-Adaption/" class="post-category">
-                                Domain Adaption
+                            <a href="/categories/%E8%AE%BA%E6%96%87/Transfer-Learning/Domain-Adaptataion/" class="post-category">
+                                Domain Adaptataion
                             </a>
                         
                     </div>
@@ -473,27 +463,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h3 id="文章结构"><a class="markdownIt-Anchor" href="#文章结构"></a> 文章结构</h3>
-<!-- TOC -->
-<ul>
-<li><a href="#0-abstract">0. Abstract</a></li>
-<li><a href="#1-introduction">1. Introduction</a></li>
-<li><a href="#2-related-work">2. Related work</a>
-<ul>
-<li><a href="#21-open-set-domain-adaption">2.1. Open-set domain adaption</a></li>
-<li><a href="#22-tranformation-consistency">2.2. Tranformation consistency</a></li>
-</ul>
-</li>
-<li><a href="#3-open-set-hypothesis-transfer">3. Open-set hypothesis transfer</a>
-<ul>
-<li><a href="#31-source-domain-model">3.1. Source domain model</a></li>
-<li><a href="#32-pseudo-label-generation">3.2. Pseudo-label generation</a></li>
-<li><a href="#33-transformation-consistency">3.3. Transformation consistency</a></li>
-</ul>
-</li>
-<li><a href="#4-experiments">4. Experiments</a></li>
-<li><a href="#5-conclusions">5. Conclusions</a></li>
-</ul>
-<!-- /TOC -->
+<!-- TOC -->autoauto- [文章结构](#文章结构)auto- [0. Abstract](#0-abstract)auto- [1. Introduction](#1-introduction)auto- [2. Related work](#2-related-work)auto    - [2.1. Open-set domain adaption](#21-open-set-domain-adaption)auto    - [2.2. Tranformation consistency](#22-tranformation-consistency)auto- [3. Open-set hypothesis transfer](#3-open-set-hypothesis-transfer)auto    - [3.1. Source domain model](#31-source-domain-model)auto        - [3.2. Pseudo-label generation](#32-pseudo-label-generation)auto    - [3.3. Transformation consistency](#33-transformation-consistency)auto- [4. Experiments](#4-experiments)autoauto<!-- /TOC -->
 <h3 id="0-abstract"><a class="markdownIt-Anchor" href="#0-abstract"></a> 0. Abstract</h3>
 <p>无监督开放集域适应(Unsupervised Open-set Domain Adaption,UODA)是指未知目标数据中有未知类。<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext mathvariant="bold">过去的方法同时依赖于源域和目标域的数据去实现域对齐，但出于隐私考虑一些应用将会受到限制</mtext></mrow><annotation encoding="application/x-tex">\textbf{过去的方法同时依赖于源域和目标域的数据去实现域对齐，但出于隐私考虑一些应用将会受到限制}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68611em;vertical-align:0em;"></span><span class="mord text"><span class="mord textbf cjk_fallback">过去的方法同时依赖于源域和目标域的数据去实现域对齐，但出于隐私考虑一些应用将会受到限制</span></span></span></span></span>。在这里我们考虑对于这个有挑战性的假设迁移设置，也就是说<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext mathvariant="bold">在目标域上的适应是不能使用源域上的数据的</mtext></mrow><annotation encoding="application/x-tex">\textbf{在目标域上的适应是不能使用源域上的数据的}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68611em;vertical-align:0em;"></span><span class="mord text"><span class="mord textbf cjk_fallback">在目标域上的适应是不能使用源域上的数据的</span></span></span></span></span>。我们提出一个方法主要考虑在目标域上的迁移的语义一致性。特别地，我们的模型是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext mathvariant="bold">第一个</mtext></mrow><annotation encoding="application/x-tex">\textbf{第一个}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68611em;vertical-align:0em;"></span><span class="mord text"><span class="mord textbf cjk_fallback">第一个</span></span></span></span></span>实现可信的预测以及使用<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext mathvariant="bold">伪标签</mtext></mrow><annotation encoding="application/x-tex">\textbf{伪标签}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68611em;vertical-align:0em;"></span><span class="mord text"><span class="mord textbf cjk_fallback">伪标签</span></span></span></span></span>进行分类。然后我们强调让我们的模型输出在语义上和输入一致的并且确定的预测结果。因此，未标记的数据可以被分类为不同的类，恰好是源域中的类或者是未知类。</p>
 <h3 id="1-introduction"><a class="markdownIt-Anchor" href="#1-introduction"></a> 1. Introduction</h3>
@@ -948,7 +918,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">33.9k</span>&nbsp;字
+                class="white-color">37.8k</span>&nbsp;字
             
             
             
