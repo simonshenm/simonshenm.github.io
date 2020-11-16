@@ -4,22 +4,15 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="机器学习1：绪论, 计算机科学在读 | 爱生活 | 爱思考">
-    <meta name="description" content=" 机器学习：绪论
- 基本术语
+    <meta name="keywords" content="笔记:Domain Adaptation in the Absence of Source Domain Data, 计算机科学在读 | 爱生活 | 爱思考">
+    <meta name="description" content=" 笔记：Domain Adaptation in the Absence of Source Domain Data
 
-数据集：记录的集合
-样本：示例
-特征：属性
-样本空间：输入空间
-特征向量：空间中的每一个点对应一个坐标向量
-训练
-训练数据
-训练样本
-训练集合：训练样本组成的集合
-分类
-回归
-监督学习（有标签），无监督学习（">
+
+0. Abstract
+1. Introduction
+2. Target Applications
+
+2.1. Ve">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -27,7 +20,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>机器学习1：绪论 | 沿溪行</title>
+    <title>笔记:Domain Adaptation in the Absence of Source Domain Data | 沿溪行</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -277,12 +270,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s1.ax1x.com/2020/10/13/0hjrNQ.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">机器学习1：绪论</h1>
+                    <h1 class="description center-align post-title">笔记:Domain Adaptation in the Absence of Source Domain Data</h1>
                 </div>
             </div>
         </div>
@@ -398,8 +391,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                                <span class="chip bg-color">机器学习</span>
+                            <a href="/tags/Domain-Adaptation/">
+                                <span class="chip bg-color">Domain Adaptation</span>
+                            </a>
+                        
+                            <a href="/tags/Absence-of-Source-Data/">
+                                <span class="chip bg-color">Absence of Source Data</span>
                             </a>
                         
                     </div>
@@ -410,12 +407,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%A5%BF%E7%93%9C%E4%B9%A6/" class="post-category">
-                                西瓜书
-                            </a>
-                        
-                            <a href="/categories/%E8%A5%BF%E7%93%9C%E4%B9%A6/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                机器学习
+                            <a href="/categories/%E8%AE%BA%E6%96%87/" class="post-category">
+                                论文
                             </a>
                         
                     </div>
@@ -427,7 +420,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-10-09
+                    2020-11-13
                 </div>
                 
 
@@ -436,7 +429,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    96
+                    89
                 </div>
                 
 
@@ -459,23 +452,38 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="center机器学习绪论"><a class="markdownIt-Anchor" href="#center机器学习绪论"></a> <center>机器学习：绪论</h2>
-<h3 id="基本术语"><a class="markdownIt-Anchor" href="#基本术语"></a> 基本术语</h3>
-<ol>
-<li>数据集：记录的集合</li>
-<li>样本：示例</li>
-<li>特征：属性</li>
-<li>样本空间：输入空间</li>
-<li>特征向量：空间中的每一个点对应一个坐标向量</li>
-<li>训练</li>
-<li>训练数据</li>
-<li>训练样本</li>
-<li>训练集合：训练样本组成的集合</li>
-<li>分类</li>
-<li>回归</li>
-<li>监督学习（有标签），无监督学习（无标签）</li>
-</ol>
-
+                <h2 id="centering笔记domain-adaptation-in-the-absence-of-source-domain-data"><a class="markdownIt-Anchor" href="#centering笔记domain-adaptation-in-the-absence-of-source-domain-data"></a> <centering>笔记：Domain Adaptation in the Absence of Source Domain Data</h2>
+<!--TOC-->
+<ul>
+<li><a href="">0. Abstract</a></li>
+<li><a href="">1. Introduction</a></li>
+<li><a href="">2. Target Applications</a>
+<ul>
+<li><a href="">2.1. Vehicle Passenger Detection System</a></li>
+<li><a href="">2.2. Empath</a></li>
+</ul>
+</li>
+<li><a href="">3. State of the art</a></li>
+<li><a href="">4. Domain Adaptation with Classifiers</a>
+<ul>
+<li><a href="">4.1. Supervised Adaptation with MCF</a></li>
+<li><a href="">4.2. Integrating source classifiers in MCF</a></li>
+<li><a href="">4.3. Unsupervised Adaptation</a></li>
+<li><a href="">4.4. Adaptation with Class Means</a></li>
+<li><a href="">4.5. Transductive domain adaptation</a></li>
+</ul>
+</li>
+<li><a href="">5. Experiments Results</a>
+<ul>
+<li><a href="">5.1. Datasets and Experimental Framework</a></li>
+<li><a href="">5.2. Unsupervised Setting</a></li>
+<li><a href="">5.3. Supervised Setting</a></li>
+<li><a href="">5.4. Semi-supervised Setting</a></li>
+</ul>
+</li>
+<li><a href="">6. Conclusion</a></li>
+</ul>
+<!--/TOC-->
             </div>
             <hr/>
 
@@ -500,7 +508,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="www.simonworld.cn/posts/8667.html">www.simonworld.cn/posts/8667.html</a>
+                    <a href="www.simonworld.cn/posts/29639.html">www.simonworld.cn/posts/29639.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -538,8 +546,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                                    <span class="chip bg-color">机器学习</span>
+                                <a href="/tags/Domain-Adaptation/">
+                                    <span class="chip bg-color">Domain Adaptation</span>
+                                </a>
+                            
+                                <a href="/tags/Absence-of-Source-Data/">
+                                    <span class="chip bg-color">Absence of Source Data</span>
                                 </a>
                             
                         </div>
@@ -580,58 +592,59 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/60164.html">
+                <a href="/posts/29639.html">
                     <div class="card-image">
                         
-                        <img src="https://s1.ax1x.com/2020/10/13/0hjrNQ.jpg" class="responsive-img" alt="西瓜书笔记">
                         
-                        <span class="card-title">西瓜书笔记</span>
+                        <img src="" class="responsive-img" alt="笔记:Domain Adaptation in the Absence of Source Domain Data">
+                        
+                        <span class="card-title">笔记:Domain Adaptation in the Absence of Source Domain Data</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                             机器学习2：模型评估与选择
- 一. 经验误差与过拟合
- 1. 基本概念
-① 错误率：E=a/m，m个样本中有a个样本分类错误，分类错误样本数/样本总数
-② 精度：1-E=1-a/m
-③ 误差：学习器的实际预测输出与样本的真实输出之间的差异
+                             笔记：Domain Adaptation in the Absence of Source Domain Data
+
+
+0. Abstract
+1. Introduction
+2. Target Applications
+
+2.1. Ve
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-12
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-13
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%A5%BF%E7%93%9C%E4%B9%A6/" class="post-category">
-                                    西瓜书
-                                </a>
-                            
-                            <a href="/categories/%E8%A5%BF%E7%93%9C%E4%B9%A6/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    机器学习
+                            <a href="/categories/%E8%AE%BA%E6%96%87/" class="post-category">
+                                    论文
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">机器学习</span>
+                    <a href="/tags/Domain-Adaptation/">
+                        <span class="chip bg-color">Domain Adaptation</span>
                     </a>
                     
-                    <a href="/tags/%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E9%80%89%E6%8B%A9/">
-                        <span class="chip bg-color">模型评估与选择</span>
+                    <a href="/tags/Absence-of-Source-Data/">
+                        <span class="chip bg-color">Absence of Source Data</span>
                     </a>
                     
                 </div>
@@ -645,32 +658,33 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/13502.html">
+                <a href="/posts/19774.html">
                     <div class="card-image">
                         
-                        <img src="https://s2.ax1x.com/2020/03/02/3Wem7V.jpg" class="responsive-img" alt="什么是有监督学习和无监督学习？">
+                        <img src="https://s3.ax1x.com/2020/11/12/BzygTH.png" class="responsive-img" alt="笔记:Do We Really Need to Access the Source Data?Source Hypothesis Transfer for Unsupervised Domain Adaptation">
                         
-                        <span class="card-title">什么是有监督学习和无监督学习？</span>
+                        <span class="card-title">笔记:Do We Really Need to Access the Source Data?Source Hypothesis Transfer for Unsupervised Domain Adaptation</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                             Supervised Vs. Unsupervised Learning
- 为什么要写这个？
-  最近想要系统的学习以下机器学习，老师推荐了Andrew Ng的机器学习，先看看吧，最近有点忙，就不码字了，就基本上在笔记本上写好了然后导入图
+                              笔记:Do We Really Need to Access the Source Data?Source Hypothesis Transfer for Unsupervised Domain Adaptation
+
+
+0. Abst
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-10
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    机器学习
+                            <a href="/categories/%E8%AE%BA%E6%96%87/" class="post-category">
+                                    论文
                                 </a>
                             
                             
@@ -680,16 +694,16 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">机器学习</span>
+                    <a href="/tags/Domain-Adaptation/">
+                        <span class="chip bg-color">Domain Adaptation</span>
                     </a>
                     
-                    <a href="/tags/%E6%9C%89%E7%9B%91%E7%9D%A3/">
-                        <span class="chip bg-color">有监督</span>
+                    <a href="/tags/Hypothesis-Transfer-Learning/">
+                        <span class="chip bg-color">Hypothesis Transfer Learning</span>
                     </a>
                     
-                    <a href="/tags/%E6%97%A0%E7%9B%91%E7%9D%A3/">
-                        <span class="chip bg-color">无监督</span>
+                    <a href="/tags/Pseudo-Labels/">
+                        <span class="chip bg-color">Pseudo Labels</span>
                     </a>
                     
                 </div>
