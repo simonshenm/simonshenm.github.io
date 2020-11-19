@@ -4,11 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Day1：连接摄像头, 计算机科学在读 | 爱生活 | 爱思考">
-    <meta name="description" content=" Day1：连接摄像头
-  之前买了很久，一直吃灰，趁着暑假提前回学校就拿出来玩，哈哈哈哈，下面这句话是重点：
- 树莓派摄像头不支持热插拔
-  好了，可以开始进行了，感觉确实有的博客的教程没有图文对初学者不是很友好，所以，友好的我，友好地加">
+    <meta name="keywords" content="Pytorch实践：SHOT, 计算机科学在读 | 爱生活 | 爱思考">
+    <meta name="description" content="  Pytorch实践：SHOT
+实验机器：Google Colab
+github原地址：https://github.com/tim-learn/SHOT
+ 实验1：Unsupervised Closed-set Domain Adapt">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Day1：连接摄像头 | 沿溪行</title>
+    <title>Pytorch实践：SHOT | 沿溪行</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -266,12 +266,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.ax1x.com/2020/02/11/1oko1P.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s3.ax1x.com/2020/11/18/De7LJf.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Day1：连接摄像头</h1>
+                    <h1 class="description center-align post-title">Pytorch实践：SHOT</h1>
                 </div>
             </div>
         </div>
@@ -387,12 +387,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/">
-                                <span class="chip bg-color">树莓派</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%91%84%E5%83%8F%E5%A4%B4/">
-                                <span class="chip bg-color">摄像头</span>
+                            <a href="/tags/Pytorch/">
+                                <span class="chip bg-color">Pytorch</span>
                             </a>
                         
                     </div>
@@ -403,12 +399,12 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
-                                教程
+                            <a href="/categories/Pytorch/" class="post-category">
+                                Pytorch
                             </a>
                         
-                            <a href="/categories/%E6%95%99%E7%A8%8B/%E6%A0%91%E8%8E%93%E6%B4%BE/" class="post-category">
-                                树莓派
+                            <a href="/categories/Pytorch/SHOT/" class="post-category">
+                                SHOT
                             </a>
                         
                     </div>
@@ -420,7 +416,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-08-04
+                    2020-11-15
                 </div>
                 
 
@@ -429,14 +425,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    487
+                    873
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    5 分
                 </div>
                 
 
@@ -452,42 +448,129 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="centerday1连接摄像头center"><a class="markdownIt-Anchor" href="#centerday1连接摄像头center"></a> <center>Day1：连接摄像头</center></h2>
-<p>  之前买了很久，一直吃灰，趁着暑假提前回学校就拿出来玩，哈哈哈哈，下面这句话是重点：</p>
-<h1 id="center树莓派摄像头不支持热插拔center"><a class="markdownIt-Anchor" href="#center树莓派摄像头不支持热插拔center"></a> <center>树莓派摄像头不支持热插拔</center></h1>
-<p>  好了，可以开始进行了，感觉确实有的博客的教程没有图文对初学者不是很友好，所以，友好的我，友好地加上了图片哈哈哈哈，为此我还下了一个截屏工具，一会儿再说，不过后来觉得传输麻烦，就没用截图工具</p>
-<h4 id="一工具"><a class="markdownIt-Anchor" href="#一工具"></a> 一.工具</h4>
-<p>1.树莓派3b+<br />
-2.摄像头模块（应该是叫排线款吧）<br />
-3.7寸微雪显示屏（当时头铁，买了一个显示屏，其实用手机/ipad/电脑都可以做屏幕的）<br />
-4.各种连接线<br />
-5.键盘鼠标（可有可无，但我假设已经解决了这些交互工具）</p>
-<h4 id="二摄像头安放图示"><a class="markdownIt-Anchor" href="#二摄像头安放图示"></a> 二.摄像头安放图示</h4>
-<p>  树莓派板子上有个<b>camera</b>的插槽，把上面<b>黑色部分</b>提起来可以方便插入排线，因为我一开始的鲁莽，差点给插坏了…然后就如下所示了（自己找参照吧，忽略我凌乱的工作台）<br />
-<img src="https://s2.ax1x.com/2020/02/09/1h4HPK.jpg" alt="整体图" /><br />
-<img src="https://s2.ax1x.com/2020/02/09/1h4jrd.jpg" alt="细节图" /></p>
-<h4 id="三树莓派摄像头设置"><a class="markdownIt-Anchor" href="#三树莓派摄像头设置"></a> 三.树莓派摄像头设置</h4>
-<h5 id="1打开命令界面"><a class="markdownIt-Anchor" href="#1打开命令界面"></a> 1.打开命令界面</h5>
-<p>  和ubuntu一样，<b>ALT+CTRL+T</b>打开命令界面</p>
-<h5 id="2更新"><a class="markdownIt-Anchor" href="#2更新"></a> 2.更新</h5>
-<p>  很多阿婆主没有做，我也没有，因为之前安装包用过了，不过保险起见，还是敲两行吧：</p>
-<center><code>sudo apt-get update</code></center>  
-<center><code>sudo apt-get upgrade</code></center>
-<h5 id="3设置"><a class="markdownIt-Anchor" href="#3设置"></a> 3.设置</h5>
-<p>①<code>sudo raspi-config</code>：打开系统设置<br />
-②ENTER选择Interfacing Option<br />
-<img src="https://s2.ax1x.com/2020/02/09/1h4T56.jpg" alt="3" /><br />
-③ENTER选择Camera<br />
-<img src="https://s2.ax1x.com/2020/02/09/1h4q2D.jpg" alt="4" /><br />
-④ENTER选择是/Yes（因为我汉化了，所以就是选择Enable就好啦)<br />
-<img src="https://s2.ax1x.com/2020/02/09/1h4vqA.jpg" alt="5" /></p>
-<h5 id="4重启"><a class="markdownIt-Anchor" href="#4重启"></a> 4.重启</h5>
-<p>  桌面鼠标重启也行，不过一般习惯在命令行reboot也行</p>
-<h4 id="四测试"><a class="markdownIt-Anchor" href="#四测试"></a> 四.测试</h4>
-<p>  打开命令界面，输入<code>raspistill -o test.jpg</code>，等个几秒，好了，照片就在/home/pi里面摆着了</p>
-<h4 id="五截屏工具"><a class="markdownIt-Anchor" href="#五截屏工具"></a> 五.截屏工具</h4>
-<p>①下载：<code>sudo apt-get install scrot</code><br />
-②运行：<code>scrot -s</code></p>
+                <h2 id="centering-pytorch实践shot"><a class="markdownIt-Anchor" href="#centering-pytorch实践shot"></a> <centering> Pytorch实践：SHOT</h2>
+<p>实验机器：Google Colab</p>
+<p>github原地址：<a href="https://github.com/tim-learn/SHOT" target="_blank" rel="noopener">https://github.com/tim-learn/SHOT</a></p>
+<h3 id="实验1unsupervised-closed-set-domain-adaptation-uda-on-the-digits-dataset"><a class="markdownIt-Anchor" href="#实验1unsupervised-closed-set-domain-adaptation-uda-on-the-digits-dataset"></a> 实验1：Unsupervised Closed-set Domain Adaptation (UDA) on the Digits dataset</h3>
+<h4 id="1-mnist-usps-m2u-shot-cls_par-01"><a class="markdownIt-Anchor" href="#1-mnist-usps-m2u-shot-cls_par-01"></a> 1. MNIST -&gt; USPS (m2u) SHOT (cls_par = 0.1)</h4>
+<p><strong>①实验代码</strong></p>
+<pre class="highlight"><code class="python">
+</code></pre>
+<p><strong>②实验命令</strong></p>
+<pre class="highlight"><code class="">!python uda_digit.py --dset m2u --gpu_id 0 --output ckps_digits --cls_par 0.1
+</code></pre>
+<p><strong>③实验结果</strong></p>
+<pre class="highlight"><code class="">Accuracy = 94.07% -&gt; 95.11%
+Task: m2u, Iter:117/3510; Accuracy = 96.94%
+Accuracy = 96.84% -&gt; 96.71%
+Task: m2u, Iter:234/3510; Accuracy = 97.10%
+Accuracy = 97.06% -&gt; 96.77%
+Task: m2u, Iter:351/3510; Accuracy = 97.42%
+Accuracy = 96.87% -&gt; 96.77%
+Task: m2u, Iter:468/3510; Accuracy = 97.37%
+Accuracy = 96.93% -&gt; 96.92%
+Task: m2u, Iter:585/3510; Accuracy = 97.63%
+Accuracy = 97.32% -&gt; 97.19%
+Task: m2u, Iter:702/3510; Accuracy = 97.74%
+Accuracy = 97.39% -&gt; 97.16%
+Task: m2u, Iter:819/3510; Accuracy = 97.37%
+Accuracy = 97.31% -&gt; 97.18%
+Task: m2u, Iter:936/3510; Accuracy = 97.85%
+Accuracy = 97.47% -&gt; 97.34%
+Task: m2u, Iter:1053/3510; Accuracy = 97.80%
+Accuracy = 97.43% -&gt; 97.41%
+Task: m2u, Iter:1170/3510; Accuracy = 97.80%
+Accuracy = 97.59% -&gt; 97.46%
+Task: m2u, Iter:1287/3510; Accuracy = 97.90%
+Accuracy = 97.47% -&gt; 97.46%
+Task: m2u, Iter:1404/3510; Accuracy = 97.85%
+Accuracy = 97.57% -&gt; 97.55%
+Task: m2u, Iter:1521/3510; Accuracy = 97.96%
+Accuracy = 97.58% -&gt; 97.53%
+Task: m2u, Iter:1638/3510; Accuracy = 97.90%
+Accuracy = 97.66% -&gt; 97.61%
+Task: m2u, Iter:1755/3510; Accuracy = 97.80%
+Accuracy = 97.49% -&gt; 97.53%
+Task: m2u, Iter:1872/3510; Accuracy = 97.69%
+Accuracy = 97.62% -&gt; 97.54%
+Task: m2u, Iter:1989/3510; Accuracy = 97.90%
+Accuracy = 97.58% -&gt; 97.58%
+Task: m2u, Iter:2106/3510; Accuracy = 97.74%
+Accuracy = 97.57% -&gt; 97.54%
+Task: m2u, Iter:2223/3510; Accuracy = 97.85%
+Accuracy = 97.61% -&gt; 97.58%
+Task: m2u, Iter:2340/3510; Accuracy = 97.85%
+Accuracy = 97.63% -&gt; 97.57%
+Task: m2u, Iter:2457/3510; Accuracy = 97.96%
+Accuracy = 97.58% -&gt; 97.61%
+Task: m2u, Iter:2574/3510; Accuracy = 98.01%
+Accuracy = 97.71% -&gt; 97.59%
+Task: m2u, Iter:2691/3510; Accuracy = 97.85%
+Accuracy = 97.71% -&gt; 97.66%
+Task: m2u, Iter:2808/3510; Accuracy = 97.85%
+Accuracy = 97.61% -&gt; 97.66%
+Task: m2u, Iter:2925/3510; Accuracy = 97.90%
+Accuracy = 97.69% -&gt; 97.67%
+Task: m2u, Iter:3042/3510; Accuracy = 97.80%
+Accuracy = 97.66% -&gt; 97.66%
+Task: m2u, Iter:3159/3510; Accuracy = 97.96%
+Accuracy = 97.67% -&gt; 97.63%
+Task: m2u, Iter:3276/3510; Accuracy = 97.85%
+Accuracy = 97.61% -&gt; 97.57%
+Task: m2u, Iter:3393/3510; Accuracy = 97.96%
+Accuracy = 97.74% -&gt; 97.65%
+Task: m2u, Iter:3510/3510; Accuracy = 97.90%
+</code></pre>
+<p><strong>④实验结论</strong></p>
+<h4 id="2-mnist-usps-m2u-shot-im-cls_par-00"><a class="markdownIt-Anchor" href="#2-mnist-usps-m2u-shot-im-cls_par-00"></a> 2. MNIST -&gt; USPS (m2u) SHOT-IM (cls_par = 0.0)</h4>
+<p><strong>①实验代码</strong><br />
+<strong>②实验命令</strong></p>
+<pre class="highlight"><code class="">!python uda_digit.py --dset m2u --gpu_id 0 --output ckps_digits --cls_par 0.0
+</code></pre>
+<p><strong>③实验结果</strong></p>
+<pre class="highlight"><code class="">Task: m2u, Iter:2814/28140; Accuracy = 98.65%/ 98.78%
+Task: m2u, Iter:5628/28140; Accuracy = 99.31%/ 99.20%
+Task: m2u, Iter:8442/28140; Accuracy = 99.49%/ 99.32%
+Task: m2u, Iter:11256/28140; Accuracy = 99.56%/ 99.37%
+Task: m2u, Iter:14070/28140; Accuracy = 99.59%/ 99.37%
+Task: m2u, Iter:16884/28140; Accuracy = 99.61%/ 99.31%
+Task: m2u, Iter:19698/28140; Accuracy = 99.64%/ 99.37%
+Task: m2u, Iter:22512/28140; Accuracy = 99.67%/ 99.33%
+Task: m2u, Iter:25326/28140; Accuracy = 99.67%/ 99.36%
+Task: m2u, Iter:28140/28140; Accuracy = 99.69%/ 99.36%
+Task: m2u, Accuracy = 88.55%
+Task: m2u, Iter:117/3510; Accuracy = 97.47%
+Task: m2u, Iter:234/3510; Accuracy = 96.56%
+Task: m2u, Iter:351/3510; Accuracy = 94.84%
+Task: m2u, Iter:468/3510; Accuracy = 93.28%
+Task: m2u, Iter:585/3510; Accuracy = 96.24%
+Task: m2u, Iter:702/3510; Accuracy = 96.29%
+Task: m2u, Iter:819/3510; Accuracy = 95.11%
+Task: m2u, Iter:936/3510; Accuracy = 95.70%
+Task: m2u, Iter:1053/3510; Accuracy = 92.63%
+Task: m2u, Iter:1170/3510; Accuracy = 95.22%
+Task: m2u, Iter:1287/3510; Accuracy = 94.73%
+Task: m2u, Iter:1404/3510; Accuracy = 92.04%
+Task: m2u, Iter:1521/3510; Accuracy = 92.69%
+Task: m2u, Iter:1638/3510; Accuracy = 93.66%
+Task: m2u, Iter:1755/3510; Accuracy = 92.47%
+Task: m2u, Iter:1872/3510; Accuracy = 93.82%
+Task: m2u, Iter:1989/3510; Accuracy = 91.67%
+Task: m2u, Iter:2106/3510; Accuracy = 92.42%
+Task: m2u, Iter:2223/3510; Accuracy = 91.40%
+Task: m2u, Iter:2340/3510; Accuracy = 91.77%
+Task: m2u, Iter:2457/3510; Accuracy = 92.90%
+Task: m2u, Iter:2574/3510; Accuracy = 92.69%
+Task: m2u, Iter:2691/3510; Accuracy = 92.15%
+Task: m2u, Iter:2808/3510; Accuracy = 93.44%
+Task: m2u, Iter:2925/3510; Accuracy = 90.75%
+Task: m2u, Iter:3042/3510; Accuracy = 92.37%
+Task: m2u, Iter:3159/3510; Accuracy = 92.15%
+Task: m2u, Iter:3276/3510; Accuracy = 91.40%
+Task: m2u, Iter:3393/3510; Accuracy = 92.15%
+Task: m2u, Iter:3510/3510; Accuracy = 92.15%
+</code></pre>
+<p><strong>④实验结论</strong></p>
 
             </div>
             <hr/>
@@ -513,7 +596,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="www.simonworld.cn/posts/14015.html">www.simonworld.cn/posts/14015.html</a>
+                    <a href="www.simonworld.cn/posts/8853.html">www.simonworld.cn/posts/8853.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -551,12 +634,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/">
-                                    <span class="chip bg-color">树莓派</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%91%84%E5%83%8F%E5%A4%B4/">
-                                    <span class="chip bg-color">摄像头</span>
+                                <a href="/tags/Pytorch/">
+                                    <span class="chip bg-color">Pytorch</span>
                                 </a>
                             
                         </div>
@@ -601,37 +680,38 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/45593.html">
+                <a href="/posts/28277.html">
                     <div class="card-image">
                         
-                        <img src="https://s2.ax1x.com/2020/02/11/1oES5d.gif" class="responsive-img" alt="什么是粒子群算法？">
+                        <img src="https://s3.ax1x.com/2020/11/17/DVIbdK.png" class="responsive-img" alt="笔记:Universal Source-Free Domain Adaptation">
                         
-                        <span class="card-title">什么是粒子群算法？</span>
+                        <span class="card-title">笔记:Universal Source-Free Domain Adaptation</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                             什么是粒子群算法？
-  智能算法有遗传算法、人工神经网络算法、模拟退火算法等
- 一.粒子群算法简介
- 1.特点
-简单易行、收敛速度快、设置参数少
- 2.基本思想
-①源于对鸟群捕食行为的研究
-②模拟鸟群飞行觅食的行为，通过集体协作使群体达到
+                              笔记:Universal Source-Free Domain Adaptation
+
+
+0. Abstract
+1. Introduction
+2. Related Work
+3. Proposed approach
+
+3.1. Le
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-01
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-17
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/" class="post-category">
-                                    数学建模
+                            <a href="/categories/%E8%AE%BA%E6%96%87/" class="post-category">
+                                    论文
                                 </a>
                             
                             
@@ -641,20 +721,16 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">
-                        <span class="chip bg-color">数学建模</span>
+                    <a href="/tags/Domain-Adaptation/">
+                        <span class="chip bg-color">Domain Adaptation</span>
                     </a>
                     
-                    <a href="/tags/%E6%99%BA%E8%83%BD%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">智能算法</span>
+                    <a href="/tags/Universal/">
+                        <span class="chip bg-color">Universal</span>
                     </a>
                     
-                    <a href="/tags/%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">算法</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%B2%92%E5%AD%90%E7%BE%A4%E7%AE%97%E6%B3%95PSO/">
-                        <span class="chip bg-color">粒子群算法PSO</span>
+                    <a href="/tags/Source-Free/">
+                        <span class="chip bg-color">Source-Free</span>
                     </a>
                     
                 </div>
@@ -665,56 +741,55 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/14015.html">
+                <a href="/posts/15793.html">
                     <div class="card-image">
                         
-                        <img src="https://s2.ax1x.com/2020/02/11/1oko1P.png" class="responsive-img" alt="Day1：连接摄像头">
+                        <img src="https://s1.ax1x.com/2020/10/13/0hjrNQ.jpg" class="responsive-img" alt="机器学习7：贝叶斯分类器">
                         
-                        <span class="card-title">Day1：连接摄像头</span>
+                        <span class="card-title">机器学习7：贝叶斯分类器</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                             Day1：连接摄像头
-  之前买了很久，一直吃灰，趁着暑假提前回学校就拿出来玩，哈哈哈哈，下面这句话是重点：
- 树莓派摄像头不支持热插拔
-  好了，可以开始进行了，感觉确实有的博客的教程没有图文对初学者不是很友好，所以，友好的我，友好地加
+                             机器学习7：贝叶斯分类器
+ 7.1 贝叶斯决策论
+ 1. 条件风险
+将一个有NNN种类别的标记Y={c1,c2,...,cN}\mathcal{Y}=\{c_1,c_2,...,c_N\}Y={c1​,c2​,...,cN​}，用λij\
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-08-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-15
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
-                                    教程
+                            <a href="/categories/%E8%A5%BF%E7%93%9C%E4%B9%A6/" class="post-category">
+                                    西瓜书
                                 </a>
                             
-                            <a href="/categories/%E6%95%99%E7%A8%8B/%E6%A0%91%E8%8E%93%E6%B4%BE/" class="post-category">
-                                    树莓派
+                            <a href="/categories/%E8%A5%BF%E7%93%9C%E4%B9%A6/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    机器学习
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/">
-                        <span class="chip bg-color">树莓派</span>
+                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">机器学习</span>
                     </a>
                     
-                    <a href="/tags/%E6%91%84%E5%83%8F%E5%A4%B4/">
-                        <span class="chip bg-color">摄像头</span>
+                    <a href="/tags/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB%E5%99%A8/">
+                        <span class="chip bg-color">贝叶斯分类器</span>
                     </a>
                     
                 </div>
