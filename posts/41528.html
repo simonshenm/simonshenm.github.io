@@ -4,10 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="jupyter安装教程, 计算机科学在读 | 爱生活 | 爱思考">
-    <meta name="description" content=" jupyter安装教程
- 第一步:下载notebook
-有两种办法，其一是在官网下载anaconda，因为电脑上已经之前已经安装好了python，所以选择了第二种方法，直接在cmd中输入 ：pip install jupyter 就可以成">
+    <meta name="keywords" content="Pytorch实践：VGG, 计算机科学在读 | 爱生活 | 爱思考">
+    <meta name="description" content="  Pytorch实践：VGG
+Very Deep Convolutional Networks for Large-Scale Image Recognition,Karen Simonyan,2014
+ 1. 结构图
+
+ 2. 代码实现">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>jupyter安装教程 | 沿溪行</title>
+    <title>Pytorch实践：VGG | 沿溪行</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -265,12 +267,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.ax1x.com/2020/02/25/3JwnGq.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s3.ax1x.com/2020/11/23/DJL728.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">jupyter安装教程</h1>
+                    <h1 class="description center-align post-title">Pytorch实践：VGG</h1>
                 </div>
             </div>
         </div>
@@ -386,8 +388,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/jupyter/">
-                                <span class="chip bg-color">jupyter</span>
+                            <a href="/tags/Pytorch/">
+                                <span class="chip bg-color">Pytorch</span>
+                            </a>
+                        
+                            <a href="/tags/VGG/">
+                                <span class="chip bg-color">VGG</span>
                             </a>
                         
                     </div>
@@ -398,8 +404,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
-                                教程
+                            <a href="/categories/Pytorch/" class="post-category">
+                                Pytorch
                             </a>
                         
                     </div>
@@ -411,7 +417,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-25
+                    2020-11-23
                 </div>
                 
 
@@ -420,14 +426,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    263
+                    512
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -443,21 +449,106 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="centerjupyter安装教程center"><a class="markdownIt-Anchor" href="#centerjupyter安装教程center"></a> <center>jupyter安装教程</center></h2>
-<h4 id="第一步下载notebook"><a class="markdownIt-Anchor" href="#第一步下载notebook"></a> 第一步:下载notebook</h4>
-<p>有两种办法，其一是在官网下载anaconda，因为电脑上已经之前已经安装好了python，所以选择了第二种方法，直接在cmd中输入 ：pip install jupyter 就可以成功安装<br />
-<b>如果输入命令但是不能安装的可能是python安装有问题，或者没有设置环境变量</b></p>
-<p></p>
-<h4 id="第二步在cmd中打开notebook"><a class="markdownIt-Anchor" href="#第二步在cmd中打开notebook"></a> 第二步:在cmd中打开notebook</h4>
-<p>输入命令：jupyter notebook，然后会直接跳转到浏览器中的Home页面<br />
-<b>注意！cmd窗口不能关闭,选择NEW可以选择新建一个文件夹或者一个notebook</b></p>
-<p></p>
-<h4 id="第三步"><a class="markdownIt-Anchor" href="#第三步"></a> 第三步</h4>
-<p>pip安装的jupyter默认存放文件是在c盘中，如果想修改这个地址，需要找到jupyter的配置文件</p>
-<p>在cmd中输入：jupyter notebook --generate-config</p>
-<p>会得到jupyter config文件的地址，根据该地址找到jupyter_notebook_config.py文件</p>
-<p>打开找到 c.NotebookApp.notebook_dir = ‘输入你要设置的目录’ 注意把前面的注释删掉（即#号）</p>
-<p>原文链接：<a href="https://blog.csdn.net/Bazingaea/article/details/83032920" target="_blank" rel="noopener">https://blog.csdn.net/Bazingaea/article/details/83032920</a></p>
+                <h2 id="center-pytorch实践vgg"><a class="markdownIt-Anchor" href="#center-pytorch实践vgg"></a> <center> Pytorch实践：VGG</h2>
+<p><strong>Very Deep Convolutional Networks for Large-Scale Image Recognition,Karen Simonyan,2014</strong></p>
+<h3 id="1-结构图"><a class="markdownIt-Anchor" href="#1-结构图"></a> 1. 结构图</h3>
+<p><img src="https://s3.ax1x.com/2020/11/23/DJbHFP.jpg" alt="" /></p>
+<h3 id="2-代码实现"><a class="markdownIt-Anchor" href="#2-代码实现"></a> 2. 代码实现</h3>
+<pre class="highlight"><code class="python"><span class="hljs-keyword">import</span> torch
+<span class="hljs-keyword">import</span> torchvision
+<span class="hljs-keyword">import</span> torch.nn <span class="hljs-keyword">as</span> nn
+<span class="hljs-keyword">from</span> torch.utils.tensorboard <span class="hljs-keyword">import</span> SummaryWriter
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">Conv3x3BNReLU</span><span class="hljs-params">(in_channels, out_channels)</span>:</span>
+    <span class="hljs-keyword">return</span> nn.Sequential(
+        nn.Conv2d(in_channels = in_channels, out_channels = out_channels, kernel_size = <span class="hljs-number">3</span>, stride = <span class="hljs-number">1</span>, padding = <span class="hljs-number">1</span>),
+        nn.BatchNorm2d(out_channels),
+        nn.ReLU6(inplace = <span class="hljs-literal">True</span>)
+    )
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">VGGNet</span><span class="hljs-params">(nn.Module)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, block_nums, num_classes = <span class="hljs-number">1000</span>)</span>:</span>
+        super(VGGNet, self).__init__()
+        
+        self.stage1 = self._make_layers(in_channels = <span class="hljs-number">3</span>, out_channels = <span class="hljs-number">64</span>, block_num = block_nums[<span class="hljs-number">0</span>])
+        self.stage2 = self._make_layers(in_channels = <span class="hljs-number">64</span>, out_channels = <span class="hljs-number">128</span>, block_num = block_nums[<span class="hljs-number">1</span>])
+        self.stage3 = self._make_layers(in_channels = <span class="hljs-number">128</span>, out_channels = <span class="hljs-number">256</span>, block_num = block_nums[<span class="hljs-number">2</span>])
+        self.stage4 = self._make_layers(in_channels = <span class="hljs-number">256</span>, out_channels = <span class="hljs-number">512</span>, block_num = block_nums[<span class="hljs-number">3</span>])
+        self.stage5 = self._make_layers(in_channels = <span class="hljs-number">512</span>, out_channels = <span class="hljs-number">512</span>, block_num = block_nums[<span class="hljs-number">4</span>])
+        
+        self.classifier = nn.Sequential(
+            nn.Linear(in_features = <span class="hljs-number">512</span>*<span class="hljs-number">7</span>*<span class="hljs-number">7</span>, out_features = <span class="hljs-number">4096</span>),
+            nn.Dropout(p = <span class="hljs-number">0.2</span>),
+            nn.Linear(in_features = <span class="hljs-number">4096</span>, out_features = <span class="hljs-number">4096</span>),
+            nn.Dropout(p = <span class="hljs-number">0.2</span>),
+            nn.Linear(in_features = <span class="hljs-number">4096</span>, out_features = num_classes)
+        )
+        
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_make_layers</span><span class="hljs-params">(self, in_channels, out_channels, block_num)</span>:</span>
+        layers = []
+        layers.append(Conv3x3BNReLU(in_channels, out_channels))
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, block_num):
+            layers.append(Conv3x3BNReLU(out_channels, out_channels))
+        layers.append(nn.MaxPool2d(kernel_size = <span class="hljs-number">2</span>, stride = <span class="hljs-number">2</span>, ceil_mode = <span class="hljs-literal">False</span>))
+        <span class="hljs-keyword">return</span> nn.Sequential(*layers)
+    
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_init_params</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">for</span> m <span class="hljs-keyword">in</span> self.modules():
+            <span class="hljs-keyword">if</span> isinstance(m, nn.Conv2d):
+                nn.init.kaiming_normal_(m.weight, mode = <span class="hljs-string">'fan_out'</span>, nonlinearity = <span class="hljs-string">'relu'</span>)
+            <span class="hljs-keyword">elif</span> isinstance(m, nn.BatchNorm2d):
+                nn.init.constant_(m.weight, <span class="hljs-number">1</span>)
+                nn.init.constant_(m.bias, <span class="hljs-number">0</span>)
+                
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, x)</span>:</span>
+        x = self.stage1(x)
+        x = self.stage2(x)
+        x = self.stage3(x)
+        x = self.stage4(x)
+        x = self.stage5(x)
+        x = x.view(x.size(<span class="hljs-number">0</span>), <span class="hljs-number">-1</span>)
+        out = self.classifier(x)
+        <span class="hljs-keyword">return</span> out
+    
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">VGG16</span><span class="hljs-params">()</span>:</span>
+    block_nums = [<span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>]
+    model = VGGNet(block_nums)
+    <span class="hljs-keyword">return</span> model
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">VGG19</span><span class="hljs-params">()</span>:</span>
+    block_nums = [<span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>]
+    model = VGGNet(block_nums)
+    <span class="hljs-keyword">return</span> model
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">'__main__'</span>:
+    input = torch.randn(<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">224</span>, <span class="hljs-number">224</span>)
+    model = VGG16()
+    
+    <span class="hljs-string">""" 
+    with SummaryWriter(log_dir = 'C:\\Users\\Simon\\.jupyter\\logs', comment = 'VGG') as w:
+        w.add_graph(model, (input, ))
+    """</span>
+    
+    out = model(input)
+    print(model)
+</code></pre>
+<h3 id="3-优点"><a class="markdownIt-Anchor" href="#3-优点"></a> 3. 优点</h3>
+<p>(<a href="https://zhuanlan.zhihu.com/p/47391705" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/47391705</a>)</p>
+<p><strong>VGG与Alexnet相比，具有如下改进几点：</strong></p>
+<ul>
+<li>
+<p>去掉了LRN层，作者发现深度网络中LRN的作用并不明显，干脆取消了</p>
+</li>
+<li>
+<p>采用更小的卷积核-3x3，Alexnet中使用了更大的卷积核，比如有7x7的，因此VGG相对于Alexnet而言，参数量更少</p>
+</li>
+<li>
+<p>池化核变小，VGG中的池化核是2x2，stride为2，Alexnet池化核是3x3，步长为2</p>
+</li>
+<li>
+<p>VGG可以看做Hebbian Principle的一个应用，即在神经网络中越高层的网络应该越稀疏，同时表现力更强。这样可以避免过深的神经网络计算量过大，容易过拟合的问题。</p>
+</li>
+</ul>
 
             </div>
             <hr/>
@@ -483,7 +574,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="www.simonworld.cn/posts/63364.html">www.simonworld.cn/posts/63364.html</a>
+                    <a href="www.simonworld.cn/posts/41528.html">www.simonworld.cn/posts/41528.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -521,8 +612,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/jupyter/">
-                                    <span class="chip bg-color">jupyter</span>
+                                <a href="/tags/Pytorch/">
+                                    <span class="chip bg-color">Pytorch</span>
+                                </a>
+                            
+                                <a href="/tags/VGG/">
+                                    <span class="chip bg-color">VGG</span>
                                 </a>
                             
                         </div>
@@ -563,64 +658,55 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/36235.html">
+                <a href="/posts/41528.html">
                     <div class="card-image">
                         
-                        <img src="https://s2.ax1x.com/2020/02/27/30W7j0.png" class="responsive-img" alt="什么是K-means">
+                        <img src="https://s3.ax1x.com/2020/11/23/DJL728.png" class="responsive-img" alt="Pytorch实践：VGG">
                         
-                        <span class="card-title">什么是K-means</span>
+                        <span class="card-title">Pytorch实践：VGG</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                             什么是K-means？
- 一.什么时候/为什么要用K-means？
-  把n个点（可以是样本的一次观察或一个实例）划分到k个聚类中，使得每个点都属于离他最近的均值（此即聚类中心）对应的聚类，以之作为聚类的标准。
-  应用场景有以下几个方面
+                              Pytorch实践：VGG
+Very Deep Convolutional Networks for Large-Scale Image Recognition,Karen Simonyan,2014
+ 1. 结构图
+
+ 2. 代码实现
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-27
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/" class="post-category">
-                                    数学建模
-                                </a>
-                            
-                            <a href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    机器学习
+                            <a href="/categories/Pytorch/" class="post-category">
+                                    Pytorch
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">
-                        <span class="chip bg-color">数学建模</span>
+                    <a href="/tags/Pytorch/">
+                        <span class="chip bg-color">Pytorch</span>
                     </a>
                     
-                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">机器学习</span>
-                    </a>
-                    
-                    <a href="/tags/%E8%B0%B1%E8%81%9A%E7%B1%BB/">
-                        <span class="chip bg-color">谱聚类</span>
-                    </a>
-                    
-                    <a href="/tags/K-means/">
-                        <span class="chip bg-color">K-means</span>
+                    <a href="/tags/VGG/">
+                        <span class="chip bg-color">VGG</span>
                     </a>
                     
                 </div>
@@ -634,39 +720,47 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/19122.html">
+                <a href="/posts/53764.html">
                     <div class="card-image">
                         
-                        <img src="https://s2.ax1x.com/2020/02/25/3JwuR0.png" class="responsive-img" alt="什么是PCA?">
+                        <img src="https://s1.ax1x.com/2020/10/13/0hjrNQ.jpg" class="responsive-img" alt="机器学习8：集成学习">
                         
-                        <span class="card-title">什么是PCA?</span>
+                        <span class="card-title">机器学习8：集成学习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                             什么是PCA？
- 一.什么时候/为什么要用PCA?
-当特征/因素之间又一定相关性，造成特征冗余，增加了计算量的时候；
-高维数据可视化难度大，必须降低数据维度。
- 二.PCA算法
-矩阵XXX均值+标准化
-Xnew=X∗VX_{new}=X*
+                             机器学习8：集成学习
+ 8.1 个体与集成
+ 1. 集成学习
+
+
+概念：通过构建并结合多个学习器来完成学习任务，称为多分类器系统/基于委员会的学习等。
+
+
+结构
+
+其中，个体学习器常由一个现有学习算法从训练数据中产生。
+
+
+集成学习分类
+
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-20
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/" class="post-category">
-                                    数学建模
+                            <a href="/categories/%E8%A5%BF%E7%93%9C%E4%B9%A6/" class="post-category">
+                                    西瓜书
                                 </a>
                             
-                            <a href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
+                            <a href="/categories/%E8%A5%BF%E7%93%9C%E4%B9%A6/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
                                     机器学习
                                 </a>
                             
@@ -677,24 +771,12 @@ Xnew=X∗VX_{new}=X*
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">
-                        <span class="chip bg-color">数学建模</span>
-                    </a>
-                    
                     <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
                         <span class="chip bg-color">机器学习</span>
                     </a>
                     
-                    <a href="/tags/%E4%B8%BB%E6%88%90%E5%88%86%E5%88%86%E6%9E%90/">
-                        <span class="chip bg-color">主成分分析</span>
-                    </a>
-                    
-                    <a href="/tags/PCA/">
-                        <span class="chip bg-color">PCA</span>
-                    </a>
-                    
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
+                    <a href="/tags/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">集成学习</span>
                     </a>
                     
                 </div>

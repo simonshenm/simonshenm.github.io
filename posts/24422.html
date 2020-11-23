@@ -4,15 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="笔记:Domain Adaptation in the Absence of Source Domain Data, 计算机科学在读 | 爱生活 | 爱思考">
-    <meta name="description" content="  笔记:Domain Adaptation in the Absence of Source Domain Data
-
-
-0. Abstract
-1. Introduction
-2. Target Applications
-
-2.1. V">
+    <meta name="keywords" content="Pytorch实践：AlexNet, 计算机科学在读 | 爱生活 | 爱思考">
+    <meta name="description" content="  Pytorch实践：AlexNet
+ImageNet Classification with Deep Convolutional Neural Networks, Alex Krizhevsky, 2012
+输出计算公式：
+Fo=Fi">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>笔记:Domain Adaptation in the Absence of Source Domain Data | 沿溪行</title>
+    <title>Pytorch实践：AlexNet | 沿溪行</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -270,12 +266,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s3.ax1x.com/2020/11/23/DJL728.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">笔记:Domain Adaptation in the Absence of Source Domain Data</h1>
+                    <h1 class="description center-align post-title">Pytorch实践：AlexNet</h1>
                 </div>
             </div>
         </div>
@@ -391,12 +387,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Domain-Adaptation/">
-                                <span class="chip bg-color">Domain Adaptation</span>
+                            <a href="/tags/Pytorch/">
+                                <span class="chip bg-color">Pytorch</span>
                             </a>
                         
-                            <a href="/tags/Absence-of-Source-Domain-Data/">
-                                <span class="chip bg-color">Absence of Source Domain Data</span>
+                            <a href="/tags/AlexNet/">
+                                <span class="chip bg-color">AlexNet</span>
                             </a>
                         
                     </div>
@@ -407,8 +403,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%AE%BA%E6%96%87/" class="post-category">
-                                论文
+                            <a href="/categories/Pytorch/" class="post-category">
+                                Pytorch
                             </a>
                         
                     </div>
@@ -420,7 +416,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-11-17
+                    2020-11-19
                 </div>
                 
 
@@ -429,14 +425,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    98
+                    919
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -452,40 +448,88 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="centering-笔记domain-adaptation-in-the-absence-of-source-domain-data"><a class="markdownIt-Anchor" href="#centering-笔记domain-adaptation-in-the-absence-of-source-domain-data"></a> <centering> 笔记:Domain Adaptation in the Absence of Source Domain Data</h2>
-<!--TOC-->
+                <h2 id="center-pytorch实践alexnet"><a class="markdownIt-Anchor" href="#center-pytorch实践alexnet"></a> <center> Pytorch实践：AlexNet</h2>
+<p><strong>ImageNet Classification with Deep Convolutional Neural Networks, Alex Krizhevsky, 2012</strong></p>
+<p><strong>输出计算公式：</strong></p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>F</mi><mi>o</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>F</mi><mi>i</mi></msub><mi>n</mi><mo>−</mo><mi>k</mi><mo>+</mo><mn>2</mn><mi>p</mi></mrow><mi>s</mi></mfrac><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">F_o=\frac{F_in-k+2p}{s}+1
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.0574399999999997em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714399999999998em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">s</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">2</span><span class="mord mathdefault">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></span></p>
+<h3 id="1-结构图"><a class="markdownIt-Anchor" href="#1-结构图"></a> 1. 结构图</h3>
+<p><img src="https://s3.ax1x.com/2020/11/23/DJK9Zd.png" alt="" /></p>
+<p><img src="https://s3.ax1x.com/2020/11/23/DJKSqH.png" alt="" /></p>
+<p>论文中的输入是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>224</mn><mo>∗</mo><mn>224</mn><mo>∗</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">224*224*3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">2</span><span class="mord">4</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">2</span><span class="mord">4</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span>的，但有人提出使用<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>227</mn><mo>∗</mo><mn>227</mn><mo>∗</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">227*227*3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">2</span><span class="mord">7</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">2</span><span class="mord">7</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span>作为输入用上面的输出计算公式能够整除</p>
+<h3 id="2-代码实现"><a class="markdownIt-Anchor" href="#2-代码实现"></a> 2. 代码实现</h3>
+<pre class="highlight"><code class="python"><span class="hljs-keyword">import</span> torch
+<span class="hljs-keyword">import</span> torchvision
+<span class="hljs-keyword">import</span> torch.nn <span class="hljs-keyword">as</span> nn
+<span class="hljs-keyword">from</span> torch.utils.tensorboard <span class="hljs-keyword">import</span> SummaryWriter
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AlexNet</span><span class="hljs-params">(nn.Module)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self,num_classes=<span class="hljs-number">1000</span>)</span>:</span>
+        super(AlexNet,self).__init__()
+        self.feature_extraction = nn.Sequential(
+            nn.Conv2d(in_channels=<span class="hljs-number">3</span>,out_channels=<span class="hljs-number">96</span>,kernel_size=<span class="hljs-number">11</span>,stride=<span class="hljs-number">4</span>,padding=<span class="hljs-number">2</span>,bias=<span class="hljs-literal">False</span>),
+            nn.ReLU(inplace=<span class="hljs-literal">True</span>),
+            nn.MaxPool2d(kernel_size=<span class="hljs-number">3</span>,stride=<span class="hljs-number">2</span>,padding=<span class="hljs-number">0</span>),
+            
+            nn.Conv2d(in_channels=<span class="hljs-number">96</span>,out_channels=<span class="hljs-number">192</span>,kernel_size=<span class="hljs-number">5</span>,stride=<span class="hljs-number">1</span>,padding=<span class="hljs-number">2</span>,bias=<span class="hljs-literal">False</span>),
+            nn.ReLU(inplace=<span class="hljs-literal">True</span>),
+            nn.MaxPool2d(kernel_size=<span class="hljs-number">3</span>,stride=<span class="hljs-number">2</span>,padding=<span class="hljs-number">0</span>),
+            
+            nn.Conv2d(in_channels=<span class="hljs-number">192</span>,out_channels=<span class="hljs-number">384</span>,kernel_size=<span class="hljs-number">3</span>,stride=<span class="hljs-number">1</span>,padding=<span class="hljs-number">1</span>,bias=<span class="hljs-literal">False</span>),
+            nn.ReLU(inplace=<span class="hljs-literal">True</span>),
+            
+            nn.Conv2d(in_channels=<span class="hljs-number">384</span>,out_channels=<span class="hljs-number">256</span>,kernel_size=<span class="hljs-number">3</span>,stride=<span class="hljs-number">1</span>,padding=<span class="hljs-number">1</span>,bias=<span class="hljs-literal">False</span>),
+            nn.ReLU(inplace=<span class="hljs-literal">True</span>),
+            
+            nn.Conv2d(in_channels=<span class="hljs-number">256</span>,out_channels=<span class="hljs-number">256</span>,kernel_size=<span class="hljs-number">3</span>,stride=<span class="hljs-number">1</span>,padding=<span class="hljs-number">1</span>,bias=<span class="hljs-literal">False</span>),
+            nn.ReLU(inplace=<span class="hljs-literal">True</span>),
+            nn.MaxPool2d(kernel_size=<span class="hljs-number">3</span>, stride=<span class="hljs-number">2</span>, padding=<span class="hljs-number">0</span>),
+        )
+        self.classifier = nn.Sequential(
+            nn.Dropout(p=<span class="hljs-number">0.5</span>),
+            nn.Linear(in_features=<span class="hljs-number">256</span>*<span class="hljs-number">6</span>*<span class="hljs-number">6</span>,out_features=<span class="hljs-number">4096</span>),
+            nn.Dropout(p=<span class="hljs-number">0.5</span>),
+            nn.Linear(in_features=<span class="hljs-number">4096</span>, out_features=<span class="hljs-number">4096</span>),
+            nn.Linear(in_features=<span class="hljs-number">4096</span>, out_features=num_classes),
+        )
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self,x)</span>:</span>
+        x = self.feature_extraction(x)
+        x = x.view(x.size(<span class="hljs-number">0</span>),<span class="hljs-number">256</span>*<span class="hljs-number">6</span>*<span class="hljs-number">6</span>)
+        x = self.classifier(x)
+        <span class="hljs-keyword">return</span> x
+
+
+<span class="hljs-keyword">if</span> __name__ ==<span class="hljs-string">'__main__'</span>:
+    input = torch.randn(<span class="hljs-number">8</span>,<span class="hljs-number">3</span>,<span class="hljs-number">224</span>,<span class="hljs-number">224</span>) 
+    model = AlexNet() 
+    <span class="hljs-keyword">with</span> SummaryWriter(log_dir=<span class="hljs-string">'C:\\Users\\Simon\\.jupyter\\logs'</span>,comment=<span class="hljs-string">'AlexNet'</span>) <span class="hljs-keyword">as</span> w:
+        w.add_graph(model,(input, ))
+    out = model(input)
+    print(out.shape)
+    
+</code></pre>
+<h3 id="3-优点"><a class="markdownIt-Anchor" href="#3-优点"></a> 3. 优点</h3>
+<p>(<a href="https://zhuanlan.zhihu.com/p/47391705" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/47391705</a>)</p>
 <ul>
-<li><a href="">0. Abstract</a></li>
-<li><a href="">1. Introduction</a></li>
-<li><a href="">2. Target Applications</a>
-<ul>
-<li><a href="">2.1. Vehicle Passenger Detection System</a></li>
-<li><a href="">2.2. Empath</a></li>
-<li><a href="">2.3. Print and Document Usage Analytics</a></li>
-</ul>
+<li>
+<p>AlexNet采用了<strong>Relu激活函数</strong>：ReLU(x) = max(x,0)</p>
 </li>
-<li><a href="">3. State of the art</a></li>
-<li><a href="">4. Domain Adaptation with Classifier</a>
-<ul>
-<li><a href="">4.1. Supervised Adaptation with MCF</a></li>
-<li><a href="">4.2. Integrating source classifiers in MCF</a></li>
-<li><a href="">4.3. Unsupervised Adaptation</a></li>
-<li><a href="">4.4. Adaptation with Clss Means</a></li>
-<li><a href="">4.5. Transductive domain adaptation</a></li>
-</ul>
+<li>
+<p>AlexNet另一个创新是<strong>LRN(Local Response Normalization）局部响应归一化</strong>，LRN模拟神经生物学上一个叫做 侧抑制（lateral inhibitio）的功能，侧抑制指的是被激活的神经元会抑制相邻的神经元。LRN局部响应归一化借鉴侧抑制的思想实现局部抑制，使得响应比较大的值相对更大，提高了模型的泛化能力。LRN只对数据相邻区域做归一化处理，不改变数据的大小和维度。</p>
 </li>
-<li><a href="">5. Experimental Results</a>
-<ul>
-<li><a href="">5.1. Datasets and Experimental Framework</a></li>
-<li><a href="">5.2. Unsupervised Setting</a></li>
-<li><a href="">5.3. Supervised Setting</a></li>
-<li><a href="">5.4. Semi-supervised Setting</a></li>
-</ul>
+<li>
+<p>AlexNet还应用了<strong>Overlapping（重叠池化）</strong>，重叠池化就是池化操作在部分像素上有重合。池化核大小是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mo>∗</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">n*n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.46528em;vertical-align:0em;"></span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span>，步长是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span>，如果<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi><mo>=</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">k=n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span>，则是正常池化，如果 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi><mo>&lt;</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">k&lt;n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.73354em;vertical-align:-0.0391em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span>, 则是重叠池化。官方文档中说明，重叠池化的运用减少了top-5和top-1错误率的0.4%和0.3%。重叠池化有避免过拟合的作用。</p>
 </li>
-<li><a href="">6. Conclusion</a></li>
+<li>
+<p>AlexNet在fc6、fc7全连接层引入了<strong>drop out的功能</strong>。drop out是指在深度学习网络的训练过程中，对于神经网络单元，按照一定的概率（AlexNet是50%，这种情况下随机生成的网络结构最多）将其暂时从网络中丢弃（保留其权值），不再对前向和反向传输的数据响应。注意是暂时，对于随机梯度下降来说，由于是随机丢弃，故而相当于每一个mini-batch都在训练不同的网络，drop out可以有效防止模型过拟合，让网络泛化能力更强，同时由于减少了网络复杂度，加快了运算速度。还有一种观点认为drop out有效的原因是对样本增加来噪声，变相增加了训练样本。</p>
+</li>
+<li>
+<p><strong>数据增强</strong>：在数据处理这部分作者提到过将每张图片处理为256××256的大小，但网络结构图中的输入却为224××224，这是因为作者在256××256大小的图片上使用了一个224××224的滑动窗口，将每个滑动窗口中的内容作为输入，这样就能将整个数据集扩大到原来的(256−224)×(256−224)=1024(256−224)×(256−224)=1024倍</p>
+</li>
+<li>
+<p><strong>双GPU并行</strong></p>
+</li>
 </ul>
-<!--/TOC-->
-<h3 id="0-abstract"><a class="markdownIt-Anchor" href="#0-abstract"></a> 0. Abstract</h3>
 
             </div>
             <hr/>
@@ -511,7 +555,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="www.simonworld.cn/posts/29639.html">www.simonworld.cn/posts/29639.html</a>
+                    <a href="www.simonworld.cn/posts/24422.html">www.simonworld.cn/posts/24422.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -549,12 +593,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Domain-Adaptation/">
-                                    <span class="chip bg-color">Domain Adaptation</span>
+                                <a href="/tags/Pytorch/">
+                                    <span class="chip bg-color">Pytorch</span>
                                 </a>
                             
-                                <a href="/tags/Absence-of-Source-Domain-Data/">
-                                    <span class="chip bg-color">Absence of Source Domain Data</span>
+                                <a href="/tags/AlexNet/">
+                                    <span class="chip bg-color">AlexNet</span>
                                 </a>
                             
                         </div>
@@ -595,59 +639,67 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/29639.html">
+                <a href="/posts/53764.html">
                     <div class="card-image">
                         
+                        <img src="https://s1.ax1x.com/2020/10/13/0hjrNQ.jpg" class="responsive-img" alt="机器学习8：集成学习">
                         
-                        <img src="" class="responsive-img" alt="笔记:Domain Adaptation in the Absence of Source Domain Data">
-                        
-                        <span class="card-title">笔记:Domain Adaptation in the Absence of Source Domain Data</span>
+                        <span class="card-title">机器学习8：集成学习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                              笔记:Domain Adaptation in the Absence of Source Domain Data
+                             机器学习8：集成学习
+ 8.1 个体与集成
+ 1. 集成学习
 
 
-0. Abstract
-1. Introduction
-2. Target Applications
+概念：通过构建并结合多个学习器来完成学习任务，称为多分类器系统/基于委员会的学习等。
 
-2.1. V
+
+结构
+
+其中，个体学习器常由一个现有学习算法从训练数据中产生。
+
+
+集成学习分类
+
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-17
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-20
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%AE%BA%E6%96%87/" class="post-category">
-                                    论文
+                            <a href="/categories/%E8%A5%BF%E7%93%9C%E4%B9%A6/" class="post-category">
+                                    西瓜书
+                                </a>
+                            
+                            <a href="/categories/%E8%A5%BF%E7%93%9C%E4%B9%A6/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    机器学习
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Domain-Adaptation/">
-                        <span class="chip bg-color">Domain Adaptation</span>
+                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">机器学习</span>
                     </a>
                     
-                    <a href="/tags/Absence-of-Source-Domain-Data/">
-                        <span class="chip bg-color">Absence of Source Domain Data</span>
+                    <a href="/tags/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">集成学习</span>
                     </a>
                     
                 </div>
@@ -859,7 +911,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">46.3k</span>&nbsp;字
+                class="white-color">50.2k</span>&nbsp;字
             
             
             
