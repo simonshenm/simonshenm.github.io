@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>github上传大文件教程</title>
+      <link href="/posts/51030.html"/>
+      <url>/posts/51030.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="center-github上传大文件教程"><a class="markdownIt-Anchor" href="#center-github上传大文件教程"></a> <center> github上传大文件教程</h2><ol><li>下载lfs</li></ol><pre class="highlight"><code class="">git lfs install</code></pre><ol start="2"><li>初始化</li></ol><pre class="highlight"><code class="">git init</code></pre><ol start="3"><li>追踪待上传文件</li></ol><pre class="highlight"><code class="">git lfs track &quot;c:users/username/desktop/file&quot;</code></pre><ol start="4"><li>上传附属文件</li></ol><pre class="highlight"><code class="">git add .gitattributesgit commit -m &quot;add file&quot;</code></pre><ol start="5"><li>远程连接到github</li></ol><pre class="highlight"><code class="">git remote add origin git@github.com:username/repo_name.git</code></pre><ol start="6"><li>正式上传</li></ol><pre class="highlight"><code class="">git push --set-upstream origin master</code></pre><ol start="7"><li>更新repo</li></ol><pre class="highlight"><code class="">在github界面进行update</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Pytorch实践：VGG</title>
       <link href="/posts/41528.html"/>
       <url>/posts/41528.html</url>
